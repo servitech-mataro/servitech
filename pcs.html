@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ServiTech</title>
+        <link rel="stylesheet" href="style/styleGeneral.css">
+        <link rel="stylesheet" href="style/stylePcs.css">
+        <link rel="shortcut icon" href="img/ServiTech.jpg"
+            type="image/x-icon" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1><a href="index.html">ServiTech</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inici</a></li>
+                    <li class="dropdown">
+                        <a href="productes.html">Productes</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="portatils.html">Portàtils</a></li>
+                            <li><a href="pcs.html">PCs</a></li>
+                            <li><a href="components.html">Components</a></li>
+                            <li><a href="periferics.html">Perifèrics</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Ofertes</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="descomptes.html">Descomptes</a></li>
+                            <li><a href="promocions.html">Promocions
+                                    Especials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Cerca productes...">
+                <button>Cercar</button>
+            </div>
+            <div class="carrito">
+                <a href="javascript:void(0);" onclick="toggleCartSidebar()">
+                    <img src="img/carrito.png" alt="Carrito de compra"
+                        width="40">
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+            </div>
+            <div id="cart-sidebar" class="cart-sidebar">
+                <button class="close-cart-btn"
+                    onclick="toggleCartSidebar()">✖</button>
+                <h2>Productes a la Cistella</h2>
+                <ul id="cart-products-list"></ul>
+                <p id="cart-total-price">Total: 0€</p>
+                <button onclick="emptyCart()" class="vuidar">Vuidar
+                    Cistella</button>
+                <button onclick="completeOrder()" class="comprar">Realitzar
+                    Comanda</button>
+            </div>
+        </header>
+        <main>
+            <h1 class="torres">Les nostres torres</h1>
+            <section class="llista-torres">
+                <div class="producto" id="torre1">
+                    <img src="img/torres/torre1.jpg" alt="Torre 1">
+                    <h2>Intel Core i5-12400F / 32GB / 1TB
+                        SSD / RTX4060</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre1')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Intel Core i5-12400F / 32GB / 1TB SSD / RTX4060', '879.00€', 'img/torres/torre1.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre2">
+                    <img src="img/torres/torre2.jpg" alt="Torre 2">
+                    <h2>Intel Core i5 -12400F / 32GB / SSD
+                        1TB / RTX 4060 / W11 Home</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre2')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Intel Core i5 -12400F / 32GB / SSD 1TB / RTX 4060 / W11 Home', '999.00€', 'img/torres/torre2.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre3">
+                    <img src="img/torres/torre3.jpg" alt="Torre 3">
+                    <h2>AMD Ryzen 7 5800X / 32GB / 1TB SSD / RTX 4060 Ti + W11
+                        Home</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre3')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('AMD Ryzen 7 5800X / 32GB / 1TB SSD / RTX 4060 Ti + W11 Home', '1339.00€', 'img/torres/torre3.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre4">
+                    <img src="img/torres/torre4.jpg" alt="Torre 4">
+                    <h2>Imperial Intel Core i5-14600KF /
+                        2TB SSD / 32GB / RTX 4070 Super + Win</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre4')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Imperial Intel Core i5-14600KF / 2TB SSD / 32GB / RTX 4070 Super + Win', '1799.00€', 'img/torres/torre4.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre5">
+                    <img src="img/torres/torre5.jpg" alt="Torre 5">
+                    <h2>Intel Core i5-12400F / 32GB / 1TB
+                        SSD / RTX 4060 - Blanc</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre5')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Intel Core i5-12400F / 32GB / 1TB SSD / RTX 4060 - Blanc', '1151.63€', 'img/torres/torre5.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre6">
+                    <img src="img/torres/torre6.jpg" alt="Torre 6">
+                    <h2>Imperial AMD Ryzen 7 9800X3D / 32GB
+                        / 2TB SSD / RTX 5070 Ti</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre6')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Imperial AMD Ryzen 7 9800X3D / 32GB / 2TB SSD / RTX 5070 Ti', '3096.75€', 'img/torres/torre6.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre7">
+                    <img src="img/torres/torre7.jpg" alt="Torre 7">
+                    <h2>Epical-Q Hangok AMD Ryzen 9 7950X3D
+                        / 64GB / 2TB SSD / RTX 5080</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre7')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Epical-Q Hangok AMD Ryzen 9 7950X3D/64GB/2TB SSD/RTX 5080', '3899.90€', 'img/torres/torre7.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre8">
+                    <img src="img/torres/torre8.jpg" alt="Torre 8">
+                    <h2>AMD Ryzen 7 5800X / 32GB / 2TB SSD
+                        / RTX 4060 Ti</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre8')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('AMD Ryzen 7 5800X / 32GB / 2TB SSD / RTX 4060 Ti', '1518.26€', 'img/torres/torre8.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre9">
+                    <img src="img/torres/torre9.jpg" alt="Torre 9">
+                    <h2>AMD Ryzen 7 5800X / 32GB / 1TB SSD
+                        / RTX 4060 Ti - Blanc</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre9')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('AMD Ryzen 7 5800X / 32GB / 1TB SSD / RTX 4060 Ti - Blanc', '1427.29€', 'img/torres/torre9.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre10">
+                    <img src="img/torres/torre10.jpg" alt="Torre 10">
+                    <h2>Imperial AMD Ryzen 7 7800X3D / 32GB
+                        / 2TB SSD / RTX 5070 Ti + W11 H</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre10')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Imperial AMD Ryzen 7 7800X3D / 32GB / 2TB SSD / RTX 5070 Ti + W11 H', '2499.00€', 'img/torres/torre10.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre11">
+                    <img src="img/torres/torre11.jpg" alt="Torre 11">
+                    <h2>Intel Core i5-12400F / 32GB / 1TB
+                        SSD / RTX 4060 Ti</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre11')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Intel Core i5-12400F / 32GB / 1TB SSD / RTX 4060 Ti', '1049.00€', 'img/torres/torre12.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre12">
+                    <img src="img/torres/torre12.jpg" alt="Torre 12">
+                    <h2>AMD Ryzen 5 5500 / 16GB / 1TBSSD /
+                        RX 6600</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre12')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('AMD Ryzen 5 5500 / 16GB / 1TBSSD / RX 6600', '659.00€', 'img/torres/torre12.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre13">
+                    <img src="img/torres/torre13.jpg" alt="Torre 13">
+                    <h2>AMD Ryzen 7 5800X / 32GB / 2TB SSD
+                        / RTX 4060 + W11 Home - Blanc</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre13')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('AMD Ryzen 7 5800X / 32GB / 2TB SSD / RTX 4060 + W11 Home - Blanc', '1448.26€', 'img/torres/torre13.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre14">
+                    <img src="img/torres/torre14.jpg" alt="Torre 14">
+                    <h2>Apple Mac Pro M2 Ultra/64GB/1TB SSD/60 Núclis</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre14')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Apple Mac Pro M2 Ultra/64GB/1TB SSD/60 Núclis', '7789.00€', 'img/torres/torre14.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre15">
+                    <img src="img/torres/torre15.jpg" alt="Torre 15">
+                    <h2>Epical-Q Premsa Evo Intel Core
+                        Ultra 9 285KF/128GB/4TB SSD/RTX 5080</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre15')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Epical-Q Premsa Evo Intel Core Ultra 9 285KF/128GB/4TB SSD/RTX 5080', '4399.89€', 'img/torres/torre15.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre16">
+                    <img src="img/torres/torre16.jpg" alt="Torre 16">
+                    <h2>Epical-Q Hangok Ryzen 9
+                        7950X3D/64GB/2TB SSD/RTX 5080</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre16')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Epical-Q Hangok AMD Ryzen 9 7950X3D/64GB/2TB SSD/RTX 5080', '3899.90€', 'img/torres/torre16.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre17">
+                    <img src="img/torres/torre17.jpg" alt="Torre 17">
+                    <h2>Epical-Q Isiux Ryzen 9 9950X /
+                        64GB / 2TB SSD NVMe / RTX 5080 + W11 Pro</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre17')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Epical-Q Isiux AMD Ryzen 9 9950X / 64GB / 2TB SSD NVMe / RTX 5080 + W11 Pro', '3899.99€', 'img/torres/torre17.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre18">
+                    <img src="img/torres/torre18.jpg" alt="Torre 18">
+                    <h2>Ultimate Ryzen 7 9800X3D / 64GB /
+                        2TB M.2 / RTX 5080 + W11 Pro</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre18')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Ultimate Ryzen 7 9800X3D / 64GB / 2TB M.2 / RTX 5080 + W11 Pro', '3799.00€', 'img/torres/torre18.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre19">
+                    <img src="img/torres/torre19.jpg" alt="Torre 19">
+                    <h2>Epical-Q Oak9 Protos IntelCore i9
+                        14900KF, 64GB DDR5, RTX5080 + W11H</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre19')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Epical-Q Oak9 Protos IntelCore i9 14900KF, 64GB DDR5, RTX5080 + W11H', '4149.90€', 'img/torres/torre19.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="torre20">
+                    <img src="img/torres/torre20.jpg" alt="Torre 20">
+                    <h2>Epical-Q Abrams IntelCore i9
+                        14900KF, 64GB, RTX5080 + W11
+                        Pro</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('torre20')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Epical-Q Abrams IntelCore i9 14900KF, 64GB, RTX5080 + W11 Pro', '3699.90€', 'img/torres/torre20.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+            </section>
+        </main>
+        <div id="product-detail-modal" class="product-detail-modal">
+            <div class="product-detail-content">
+                <button id="close-btn" class="close-cart-btn"
+                    onclick="closeProductModal()">✖</button>
+                <img id="product-image-large" src alt="Imagen del Producto">
+                <div id="product-info">
+                    <h2 id="product-title"></h2>
+                    <p id="product-description"></p>
+                    <div id="product-characteristics"></div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 ServiTech. Tots els drets reservats.</p>
+                <div class="footer-links">
+                    <a href="#">Termes i Condicions</a>
+                    <a href="#">Política de Privacitat</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

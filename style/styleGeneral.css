@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estils Generals */
+body {
+    font-family: Arial, Sans-Serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Capçelera */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo h1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* Menú de navegació */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li.dropdown>a::after {
+    content: "▼";
+    font-size: 14px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Enllaços Menú */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 18px;
+    border-radius: 5px;
+    transition: all 1s ease-in-out;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: green;
+}
+
+/* Menú Desplegable */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    min-width: 200px;
+    z-index: 100;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 15px;
+    color: #333;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+    transition: background 0.3s ease-in-out;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f4f4f4;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.search-bar input {
+    padding: 4px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 280px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 8px 12px;
+    background-color: #355A96;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.5s;
+    font-size: 14px;
+}
+
+.search-bar button:hover {
+    background-color: #0f2349;
+}
+
+/* Estils generals per a la cistella */
+
+.carrito {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2 ease-in-out;
+}
+
+.carrito:hover {
+    transform: scale(1.1);
+}
+
+.carrito img {
+    display: block;
+    width: 45px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.carrito img:hover {
+    transform: rotate(-10deg);
+}
+
+/* Estils per a la finestra lateral de la cistella */
+
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100%;
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.4s ease-in-out;
+    overflow-y: auto;
+    border-left: 4px solid #2a5298;
+}
+
+.cart-sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1; 
+}
+
+.cart-sidebar h2 {
+    margin: 0;
+    padding: 12px 0;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #1e3c72;
+    border-bottom: 2px solid #ccc;
+}
+
+
+/* Llista de productes */
+
+#cart-products-list {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+/* Estil de cada producte */
+
+#cart-products-list img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    margin-right: 12px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-price {
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Estil per a la creu de tancar la cistella */
+
+.close-cart-btn {
+    position: absolute;
+    top: 29px;
+    right: 25px;
+    font-size: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    transition: transform 0.2s ease-in-out, color 0.2s; 
+}
+
+.close-cart-btn:hover {
+    color: #ff4444; 
+    transform: rotate(90deg); 
+}
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: linear-gradient(135deg, #ff3b3b, #ff6347);
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 14px;
+    min-width: 22px;
+    min-height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 0px 8px rgba(255, 99, 71, 0.5);
+}
+
+#cart-total-price {
+    position: sticky;
+    bottom: 25px; 
+    font-weight: bold;
+    font-size: 18px;
+    color: #2a5298;
+    background-color: #ffffff; 
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    z-index: 10; 
+}
+
+/* Estil per als botons de vuidar i comprar */
+
+.vuidar, .comprar {
+    background-color: #1e3c72; 
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Efecte hover dels botons */
+
+.vuidar:hover, .comprar:hover {
+    background-color: #0f2349;
+    transform: scale(1.05);
+}
+
+/* Efecte focus dels botons */
+
+.vuidar:focus, .comprar:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(71, 145, 255, 0.8);
+}
+
+/* Ajustus varius als botons */ 
+
+.vuidar, .comprar {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3 ease, transform 0.2s ease;
+}
+
+/* Estil per al botó d'eliminar */
+
+.eliminar {
+    padding: 8px 12px;
+    background-color: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.eliminar:hover {
+    background-color: #0f2349;
+}
+
+/* Peu de pàgina */
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer .footer-links {
+    margin-top: 10px;
+}
+
+footer .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 16px;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}

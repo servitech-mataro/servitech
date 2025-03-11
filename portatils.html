@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ServiTech</title>
+        <link rel="stylesheet" href="style/styleGeneral.css">
+        <link rel="stylesheet" href="style/stylePortatils.css">
+        <link rel="shortcut icon" href="img/ServiTech.jpg"
+            type="image/x-icon" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1><a href="index.html">ServiTech</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inici</a></li>
+                    <li class="dropdown">
+                        <a href="productes.html">Productes</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="portatils.html">Portàtils</a></li>
+                            <li><a href="pcs.html">PCs</a></li>
+                            <li><a href="components.html">Components</a></li>
+                            <li><a href="periferics.html">Perifèrics</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Ofertes</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="descomptes.html">Descomptes</a></li>
+                            <li><a href="promocions.html">Promocions Especials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Cerca productes...">
+                <button>Cercar</button>
+            </div>
+            <div class="carrito">
+                <a href="javascript:void(0);" onclick="toggleCartSidebar()">
+                    <img src="img/carrito.png" alt="Carrito de compra"
+                        width="40">
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+            </div>
+            <div id="cart-sidebar" class="cart-sidebar">
+                <button class="close-cart-btn"
+                    onclick="toggleCartSidebar()">✖</button>
+                <h2>Productes a la Cistella</h2>
+                <ul id="cart-products-list"></ul>
+                <p id="cart-total-price">Total: 0€</p>
+                <button onclick="emptyCart()" class="vuidar">Vuidar
+                    Cistella</button>
+                <button onclick="completeOrder()" class="comprar">Realitzar
+                    Comanda</button>
+            </div>
+        </header>
+        <main>
+            <h1 class="portatils">Els nostres portàtils</h1>
+            <section class="llista-portatils">
+                <div class="producto" id="producto1">
+                    <img src="img/portatil1.jpg" alt="Portátil 1">
+                    <h2>ASUS TUF Gaming A15</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto1')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('ASUS TUF Gaming A15', '1299.99€', 'img/portatil1.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto2">
+                    <img src="img/portatil2.jpg" alt="Portátil 2">
+                    <h2>LG gram 17Z90R-E.AD78B</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto2')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('LG gram 17Z90R-E.AD78B', '1779.00€', 'img/portatil2.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto3">
+                    <img src="img/portatil3.jpg" alt="Portátil 3">
+                    <h2>Alurin Go Start Intel Celeron</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto3')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Alurin Go Start Intel Celeron N4020', '209.99€', 'img/portatil3.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto4">
+                    <img src="img/portatil4.jpg" alt="Portátil 4">
+                    <h2>Acer Gaming Nitro V 15</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto4')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Acer Gaming Nitro V 15', '999.00€', 'img/portatil4.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto5">
+                    <img src="img/portatil5.jpg" alt="Portátil 5">
+                    <h2>HP 15-fd0080ns</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto5')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('HP 15-fd0080ns', '539.00€', 'img/portatil5.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto6">
+                    <img src="img/portatil6.jpg" alt="Portátil 6">
+                    <h2>ASUS TUF Gaming F17
+                    </h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto6')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('ASUS TUF Gaming F17', '1317.00€', 'img/portatil6.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto7">
+                    <img src="img/portatil7.jpg" alt="Portátil 7">
+                    <h2>MSI Thin 15 B12UC-1839XES</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto7')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('MSI Thin 15 B12UC-1839XES', '749.00€', 'img/portatil7.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto8">
+                    <img src="img/portatil8.jpg" alt="Portátil 8">
+                    <h2>HP Victus Gaming 16-r0036ns</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto8')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('HP Victus Gaming 16-r0036ns', '1129.00€', 'img/portatil8.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto9">
+                    <img src="img/portatil9.jpg" alt="Portátil 9">
+                    <h2>MSI Modern 15 H C13M-087XES</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto9')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('MSI Modern 15 H C13M-087XES', '749.00€', 'img/portatil9.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto10">
+                    <img src="img/portatil10.jpg" alt="Portátil 10">
+                    <h2>ASUS Vivobook 15 M1502YA-NJ506W</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto10')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('ASUS Vivobook 15 M1502YA-NJ506W', '529.00€', 'img/portatil10.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto11">
+                    <img src="img/portatil11.jpg" alt="Portátil 11">
+                    <h2>Acer Gaming Nitro 5 AN515-58</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto11')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Acer Gaming Nitro 5 AN515-58', '1199.00€', 'img/portatil11.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto12">
+                    <img src="img/portatil12.jpg" alt="Portátil 12">
+                    <h2>Acer Gaming Nitro V 15 ANV15-41</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto12')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Acer Gaming Nitro V 15 ANV15-41', '849.00€', 'img/portatil12.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto13">
+                    <img src="img/portatil13.jpg" alt="Portátil 13">
+                    <h2>Acer Gaming Nitro V 15 ANV15-41</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto13')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('MSI Cyborg 15 A13VE-472XES', '869.00€', 'img/portatil13.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto14">
+                    <img src="img/portatil14.jpg" alt="Portátil 14">
+                    <h2>MacBook Air Apple M3 512GB</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto14')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('MacBook Air Apple M3 512GB', '1359.00€', 'img/portatil14.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto15">
+                    <img src="img/portatil15.jpg" alt="Portátil 15">
+                    <h2>MSI Sword 16 HX B14VFKG-054XES</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto15')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('MSI Sword 16 HX B14VFKG-054XES', '1548.99€', 'img/portatil15.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto16">
+                    <img src="img/portatil16.jpg" alt="Portátil 16">
+                    <h2>ASUS Vivobook 15 M1502YA-NJ201W</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto16')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('ASUS Vivobook 15 M1502YA-NJ201W', '569.00€', 'img/portatil16.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto17">
+                    <img src="img/portatil17.jpg" alt="Portátil 17">
+                    <h2>MSI Thin A15 B7VE-071XES</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto17')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('MSI Thin A15 B7VE-071XES', '899.01€', 'img/portatil17.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto18">
+                    <img src="img/portatil18.jpg" alt="Portátil 18">
+                    <h2>Lenovo LOQ Gen 7 15ARP9</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto18')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Lenovo LOQ Gen 7 15ARP9', '979.00€', 'img/portatil18.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto19">
+                    <img src="img/portatil19.jpg" alt="Portátil 19">
+                    <h2>MacBook Air Apple M3 256GB</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto19')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('MacBook Air Apple M3 256GB', '1159.00€', 'img/portatil19.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="producto20">
+                    <img src="img/portatil20.jpg" alt="Portátil 20">
+                    <h2>ASUS Vivobook 16X K3605ZF-MB484</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('producto20')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('ASUS Vivobook 16X K3605ZF-MB484', '579.00€', 'img/portatil20.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+            </section>
+        </main>
+        <div id="product-detail-modal" class="product-detail-modal">
+            <div class="product-detail-content">
+                <button id="close-btn" class="close-cart-btn"
+                    onclick="closeProductModal()">✖</button>
+                <img id="product-image-large" src alt="Imagen del Producto">
+                <div id="product-info">
+                    <h2 id="product-title"></h2>
+                    <p id="product-description"></p>
+                    <div id="product-characteristics"></div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 ServiTech. Tots els drets reservats.</p>
+                <div class="footer-links">
+                    <a href="#">Termes i Condicions</a>
+                    <a href="#">Política de Privacitat</a>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

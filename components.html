@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ServiTech</title>
+        <link rel="stylesheet" href="style/styleGeneral.css">
+        <link rel="stylesheet" href="style/styleComponents.css">
+        <link rel="shortcut icon" href="img/ServiTech.jpg"
+            type="image/x-icon" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1><a href="index.html">ServiTech</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inici</a></li>
+                    <li class="dropdown">
+                        <a href="productes.html">Productes</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="portatils.html">Portàtils</a></li>
+                            <li><a href="pcs.html">PCs</a></li>
+                            <li><a href="components.html">Components</a></li>
+                            <li><a href="periferics.html">Perifèrics</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Ofertes</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="descomptes.html">Descomptes</a></li>
+                            <li><a href="promocions.html">Promocions
+                                    Especials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Cerca productes...">
+                <button>Cercar</button>
+            </div>
+            <div class="carrito">
+                <a href="javascript:void(0);" onclick="toggleCartSidebar()">
+                    <img src="img/carrito.png" alt="Carrito de compra"
+                        width="40">
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+            </div>
+            <div id="cart-sidebar" class="cart-sidebar">
+                <button class="close-cart-btn"
+                    onclick="toggleCartSidebar()">✖</button>
+                <h2>Productes a la Cistella</h2>
+                <ul id="cart-products-list"></ul>
+                <p id="cart-total-price">Total: 0€</p>
+                <button onclick="emptyCart()" class="vuidar">Vuidar
+                    Cistella</button>
+                <button onclick="completeOrder()" class="comprar">Realitzar
+                    Comanda</button>
+            </div>
+        </header>
+        <main>
+            <h1 class="components">Components informàtics</h1>
+            <section class="llista-components">
+                <h2 class="placa-base">Plaques base</h2>
+                <div class="producto" id="component1">
+                    <img src="img/components/component1.jpg" alt="Component 1">
+                    <h2>Gigabyte B550M K Rev. 1.0</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('component1')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Gigabyte B550M K Rev. 1.0', '94,99€', 'img/components/component1.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="component2">
+                    <img src="img/components/component2.jpg" alt="Component 2">
+                    <h2>Asus ROG STRIX Z690-A GAMING</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('component2')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Asus ROG STRIX Z690-A GAMING WIFI D4', '553.16€', 'img/components/component2.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="component3">
+                    <img src="img/components/component3.jpg" alt="Component 3">
+                    <h2>GIGABYTE X870 A ELITE WIF7 ICE</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('component3')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('GIGABYTE X870 A ELITE WIF7 ICE', '399.99€', 'img/components/component3.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="component4">
+                    <img src="img/components/component4.jpg" alt="Component 4">
+                    <h2>MSI B650 GAMING PLUS WIFI</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('component4')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('MSI B650 GAMING PLUS WIFI', '189.16€', 'img/components/component4.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <h2 class="targetes-grafiquies">Targetes Gràfiques</h2>
+                <div class="producto" id="component5">
+                    <img src="img/components/component5.jpg" alt="Component 5">
+                    <h2>MSI GeForce RTX 4060 VENTUS 2X BLACK OC 8GB GDDR6
+                        DLSS3</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('component5')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('MSI GeForce RTX 4060 VENTUS 2X BLACK OC 8GB GDDR6 DLSS3', '359.00€', 'img/components/component5.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="component6">
+                    <img src="img/components/component6.jpg" alt="Component 6">
+                    <h2>AsRock Challenger D AMD Radeon RX 6600 8 GB GDDR6</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('component6')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('AsRock Challenger D AMD Radeon RX 6600 8 GB GDDR6', '279.99€', 'img/components/component6.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="component7">
+                    <img src="img/components/component7.jpg" alt="Component 7">
+                    <h2>Gigabyte GeForce RTX 3060 WINDFORCE OC 12GB GDDR6 Rev
+                        2</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('component7')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Gigabyte GeForce RTX 3060 WINDFORCE OC 12GB GDDR6 Rev 2', '439.90€', 'img/components/component7.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="component8">
+                    <img src="img/components/component8.jpg" alt="Component 8">
+                    <h2>XFX AMD RADEON RX 7900GRE 16GB GDDR6</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('component8')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('XFX AMD RADEON RX 7900GRE 16GB GDDR6', '753.75€', 'img/components/component8.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <h2 class="processadors">Processadors</h2>
+                <div class="producto" id="component9">
+                    <img src="img/components/component9.jpg" alt="Component 9">
+                    <h2>AMD Ryzen 7 9800X3D 4.7/5.2GHz</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('component9')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Procesador AMD Ryzen 7 9800X3D 4.7/5.2GHz', '749.99€', 'img/components/component9.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="component10">
+                    <img src="img/components/component10.jpg"
+                        alt="Component 10">
+                    <h2>AMD Ryzen 5 7600X 4.7 GHz Box</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('component10')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('AMD Ryzen 5 7600X 4.7 GHz Box', '366.00€', 'img/components/component10.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="component11">
+                    <img src="img/components/component11.jpg"
+                        alt="Component 11">
+                    <h2>Intel Core i5-12400F 2.5 GHz</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('component11')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Intel Core i5-12400F 2.5 GHz', '169.99€', 'img/components/component11.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="component12">
+                    <img src="img/components/component12.jpg"
+                        alt="Component 12">
+                    <h2>Intel Core i9-14900K 3.2/6GHz Box</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('component12')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Intel Core i9-14900K 3.2/6GHz Box', '599.99€', 'img/components/component12.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <h2 class="discos-durs">Discos durs</h2>
+                <div class="producto" id="component13">
+                    <img src="img/components/component13.jpg"
+                        alt="Component 13">
+                    <h2>Forgeon Nimbus PRO Disc SSD 1TB 7400MB/S NVMe PCIe 4.0
+                        M.2 Gen4</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('component13')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Forgeon Nimbus PRO Disc SSD 1TB 7400MB/S NVMe PCIe 4.0 M.2 Gen4', '100.02€', 'img/components/component13.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="component14">
+                    <img src="img/components/component14.jpg"
+                        alt="Component 14">
+                    <h2>Samsung 990 Pro 2TB Disc SSD 7450MB/S NVMe PCIe 4.0 M.2
+                        Gen4</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('component14')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Samsung 990 Pro 2TB Disc SSD 7450MB/S NVMe PCIe 4.0 M.2 Gen4', '329.00€', 'img/components/component14.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="component15">
+                    <img src="img/components/component15.jpg"
+                        alt="Component 15">
+                    <h2>WD Black SN770 2TB Disc SSD 5150MB/S NVMe PCIe 4.0 M.2
+                        Gen4</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('component15')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('WD Black SN770 2TB Disc SSD 5150MB/S NVMe PCIe 4.0 M.2 Gen4 16GT/s', '169.99€', 'img/components/component15.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <div class="producto" id="component16">
+                    <img src="img/components/component16.jpg"
+                        alt="Component 16">
+                    <h2>Kingston NV3 1TB Disc SSD 6000MB/S NVMe PCIe 4.0 M.2
+                        Gen4 2280 3D Nand</h2>
+                    <button class="details-btn"
+                        onclick="openProductModal('component16')">Veure
+                        Detalls</button>
+                    <button class="add-to-cart-btn"
+                        onclick="addToCart('Kingston NV3 1TB Disc SSD 6000MB/S NVMe PCIe 4.0 M.2 Gen4 2280 3D Nand', '54.99€', 'img/components/component16.jpg')">Afegir
+                        a la Cistella</button>
+                </div>
+                <h2 class="refrigeracio">Refrigeracions Líquides</h2>
+                
+            </section>
+        </main>
+        <div id="product-detail-modal" class="product-detail-modal">
+            <div class="product-detail-content">
+                <button id="close-btn" class="close-cart-btn"
+                    onclick="closeProductModal()">✖</button>
+                <img id="product-image-large" src alt="Imagen del Producto">
+                <div id="product-info">
+                    <h2 id="product-title"></h2>
+                    <p id="product-description"></p>
+                    <div id="product-characteristics"></div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 ServiTech. Tots els drets reservats.</p>
+                <div class="footer-links">
+                    <a href="#">Termes i Condicions</a>
+                    <a href="#">Política de Privacitat</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

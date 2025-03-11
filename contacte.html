@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ServiTech</title>
+        <link rel="stylesheet" href="style/styleGeneral.css">
+        <link rel="shortcut icon" href="img/ServiTech.jpg"
+            type="image/x-icon" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1><a href="index.html">ServiTech</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inici</a></li>
+                    <li class="dropdown">
+                        <a href="productes.html">Productes</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="portatils.html">Portàtils</a></li>
+                            <li><a href="pcs.html">PCs</a></li>
+                            <li><a href="components.html">Components</a></li>
+                            <li><a href="periferics.html">Perifèrics</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Ofertes</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="descomptes.html">Descomptes</a></li>
+                            <li><a href="promocions.html">Promocions Especials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Cerca productes...">
+                <button>Cercar</button>
+            </div>
+            <div class="carrito">
+                <a href="javascript:void(0);" onclick="toggleCartSidebar()">
+                    <img src="img/carrito.png" alt="Carrito de compra"
+                        width="40">
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+            </div>
+            <div id="cart-sidebar" class="cart-sidebar">
+                <button class="close-cart-btn"
+                    onclick="toggleCartSidebar()">✖</button>
+                <h2>Productes a la Cistella</h2>
+                <ul id="cart-products-list"></ul>
+                <p id="cart-total-price">Total: 0€</p>
+                <button onclick="emptyCart()" class="vuidar">Vuidar
+                    Cistella</button>
+                <button onclick="completeOrder()" class="comprar">Realitzar
+                    Comanda</button>
+            </div>
+        </header>

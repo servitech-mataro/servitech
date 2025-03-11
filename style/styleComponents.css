@@ -1,0 +1,172 @@
+main {
+    font-family: Arial, sans-serif;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+h1.components {
+    font-size: 40px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 80px;
+}
+
+.llista-components {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.producto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 23%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.producto h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.details-btn, .add-to-cart-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.details-btn:hover, .add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+
+.details-btn {
+    width: 100%;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+
+.producto .details-btn {
+    margin-bottom: 10px;
+}
+
+.producto .add-to-cart-btn {
+    margin-top: 10px;
+}
+
+/* Títols de seccions */
+h2.placa-base, h2.targetes-grafiquies, h2.processadors, h2.discos-durs {
+    width: 100%;
+    font-size: 30px;
+    color: #222;
+    margin: 40px 0 20px;
+    text-align: center;
+}
+
+/* Estils per al fons del modal */
+
+.product-detail-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenidor del modal */
+.product-detail-content {
+    background: white;
+    width: 60%;
+    max-width: 700px;
+    max-height: 90vh;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow-y: auto;
+}
+
+/* Botó de tancar */
+.close-cart-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Imatge del producte */
+#product-image-large {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenidor d'informació */
+#product-info {
+    text-align: left;
+}
+
+/* Característiques a llista */
+#product-characteristics ul {
+    list-style: none;
+    padding: 0;
+}
+
+#product-characteristics ul li {
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    margin-left: 25px;
+}
+
+#product-characteristics ul li:last-child {
+    border-bottom: none;
+}
+
+
+#product-characteristics ul li::before {
+    font-size: 24px;
+    position: absolute;
+    left: -15px;
+    top: 15px;
+}
