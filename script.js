@@ -2558,7 +2558,54 @@ function openProductModal(productId) {
                 </ul>   
             `
             productImage.src = 'img/components/component17.jpg';
-        }
+        } else if (productId === 'component18') {
+            productTitle.innerText = 'NZXT Kraken Elite 360 Kit Refrigeració Líquida amb Pantalla';
+            productDescription.innerHTML = `
+                El <strong>NZXT Kraken Elite 360</strong> és un sistema de refrigeració líquida tot en un (AIO) de gran rendiment amb una pantalla personalitzable, ideal per a gamers i usuaris avançats que busquen màxim rendiment i control total.
+            `;
+            productCharacteristics.innerHTML = `
+                <ul>
+                <li><strong>Tipus:</strong> Refrigeració Líquida AIO (All-in-One)
+                    <ul>
+                        <li>Solució fàcil d'instal·lar, dissenyada per a una refrigeració eficient i sense manteniment.</li>
+                    </ul>
+                </li>
+                <li><strong>Radiador:</strong> 360mm
+                    <ul>
+                        <li>Gran superfície de dissipació per mantenir la CPU a una temperatura òptima, fins i tot sota càrrega intensa.</li>
+                    </ul>
+                </li>
+                <li><strong>Ventiladors:</strong> 3x 120mm Aer P
+                    <ul>
+                        <li>Ventiladors d'alt rendiment amb control PWM per ajustar la velocitat segons les necessitats del sistema.</li>
+                    </ul>
+                </li>
+                <li><strong>Pantalla:</strong> Pantalla LCD personalitzable
+                    <ul>
+                        <li>Mostra informació com la temperatura de la CPU, velocitat dels ventiladors o logotips personalitzats en temps real.</li>
+                    </ul>
+                </li>
+                <li><strong>Compatibilitat:</strong> Intel & AMD
+                    <ul>
+                        <li>Compatible amb els sockets més recents de processadors Intel i AMD per a un muntatge senzill i ràpid.</li>
+                    </ul>
+                </li>
+                <li><strong>Color:</strong> Negre
+                    <ul>
+                        <li>Disseny modern i estètic que s'adapta perfectament a qualsevol configuració de PC.</li>
+                    </ul>
+                </li>
+                <li><strong>Aplicacions recomanades:</strong>
+                    <ul>
+                        <li>Gaming d'alt rendiment.</li>
+                        <li>Estacions de treball professionals.</li>
+                        <li>Ordinadors personalitzats amb refrigeració òptima i un disseny elegant.</li>
+                    </ul>
+                </li>
+            </ul>
+        `;
+            productImage.src = 'img/components/component18.jpg';
+        } 
         modal.style.display = 'flex';
     }
 }
