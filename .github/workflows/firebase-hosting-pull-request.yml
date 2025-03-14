@@ -1,22 +1,27 @@
+# Archivo de workflow para desplegar automáticamente a Firebase Hosting
+# cuando haces un push a la rama 'main'
+
 name: Deploy to Firebase Hosting on merge
 
 on:
   push:
     branches:
-      - main  
+      - main  # ⚠️ Se activará solo cuando subas cambios a la rama main
 
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # Paso 1: Descargar el código del repo
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      # Paso 2: Desplegar a Firebase Hosting
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_SERVITECH_MATARO }}"
-          channelId: live
-          projectId: servitech-mataro  
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"  # Token automático de GitHub
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_SERVITECH_MATARO }}"  # Tu secreto de Firebase
+          channelId: live  # Publica en la web real
+          projectId: servitech-mataro  # ⚠️ Tu ID de proyecto Firebase
