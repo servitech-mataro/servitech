@@ -2512,6 +2512,52 @@ function openProductModal(productId) {
                 </ul>
         `;
             productImage.src = 'img/components/component16.jpg';
+        } else if (productId == 'component17') {
+            productTitle.innerText = 'Kit de refrigeració Líquida Lian-Li 360mm Blanc';
+            productDescription.innerHTML = `
+                El <strong>Lian-Li GA II LCD</strong> és un sistema de refrigeració líquida tot en un (AIO) amb un disseny elegant i modern, perfecte per a equips d'alt rendiment. Incorpora una pantalla <strong>LCD personalitzable</strong> per mostrar informació en temps real com la temperatura o logotips personalitzats. `;
+            productCharacteristics.innerHTML = `
+                <ul>
+                    <li><strong>Tipus:</strong> Refrigeració Líquida AIO (All-in-One)
+                        <ul>
+                            <li>Solució completa de fàcil instal·lació sense manteniment.</li>
+                        </ul>
+                    </li>
+                        <li><strong>Radiador:</strong> 360mm
+                            <ul>
+                                <li>Gran superfície de dissipació per a un refredament eficient de la CPU.</li>
+                            </ul>
+                        </li>
+                    <li><strong>Ventiladors:</strong> 3x 120mm RGB PWM
+                        <ul>
+                            <li>Alt rendiment amb il·luminació personalitzable i control intel·ligent de velocitat.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Pantalla:</strong> LCD personalitzable
+                        <ul>
+                            <li>Mostra informació com temperatura, ús del sistema o logotips personalitzats.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Compatibilitat:</strong> Intel & AMD
+                        <ul>
+                            <li>Compatible amb una àmplia gamma de sockets actuals de Intel i AMD.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Color:</strong> Blanc
+                        <ul>
+                            <li>Estètica elegant per a configuracions clares i modernes.</li>
+                        </ul>   
+                    </li>
+                    <li><strong>Aplicacions recomanades:</strong>
+                        <ul>
+                            <li>Gaming d'alt rendiment.</li>
+                            <li>Estacions de treball professionals.</li>
+                            <li>Ordinadors personalitzats amb disseny estètic.</li>
+                        </ul>
+                    </li>
+                </ul>   
+            `
+            productImage.src = 'img/components/component17.jpg';
         }
         modal.style.display = 'flex';
     }
