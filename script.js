@@ -2605,7 +2605,60 @@ function openProductModal(productId) {
             </ul>
         `;
             productImage.src = 'img/components/component18.jpg';
-        } 
+        } else if (productId == 'component19') {
+            productTitle.innerText = 'Corsair iCUE LINK TITAN 240 RX RGB Kit Refrigeració Líquida';
+            productDescription.innerHTML = `
+                El <strong>Corsair iCUE LINK TITAN 240 RX RGB</strong> és un sistema de refrigeració líquida d’alt rendiment que ofereix una gestió intel·ligent de la temperatura i un espectacular efecte RGB. Gràcies al seu innovador sistema <strong>iCUE LINK</strong>, permet una instal·lació més senzilla i una sincronització perfecta amb la resta de components Corsair.
+            `
+            productCharacteristics.innerHTML = `
+                <ul>
+            <li><strong>Tipus:</strong> Refrigeració Líquida AIO (All-in-One)
+                <ul>
+                    <li>Solució completa per a un refredament eficient sense manteniment.</li>
+                </ul>
+            </li>
+            <li><strong>Radiador:</strong> 240mm
+                <ul>
+                    <li>Equilibri perfecte entre mida i rendiment per a sistemes de gaming i creació de contingut.</li>
+                </ul>
+            </li>
+            <li><strong>Ventiladors:</strong> 2x 120mm RGB
+                <ul>
+                    <li>Il·luminació RGB vibrant personalitzable amb el programari iCUE.</li>
+                    <li>Funcionament silenciós amb control PWM per ajustar la velocitat automàticament.</li>
+                </ul>
+            </li>
+            <li><strong>Il·luminació:</strong> RGB integrat
+                <ul>
+                    <li>Sincronització total amb altres components Corsair mitjançant iCUE.</li>
+                </ul>
+            </li>
+            <li><strong>Compatibilitat:</strong> Intel & AMD
+                <ul>
+                    <li>Compatible amb els últims sockets de CPU d’Intel i AMD per a una integració fàcil.</li>
+                </ul>
+            </li>
+            <li><strong>Tecnologia iCUE LINK:</strong>
+                <ul>
+                    <li>Sistema d’interconnexió intel·ligent que simplifica el cablejat i millora la gestió tèrmica.</li>
+                </ul>
+            </li>
+            <li><strong>Color:</strong> Negre
+                <ul>
+                    <li>Estètica elegant per combinar amb qualsevol configuració.</li>
+                </ul>
+            </li>
+            <li><strong>Aplicacions recomanades:</strong>
+                <ul>
+                    <li>Gaming d’alt rendiment.</li>
+                    <li>Edició de vídeo i altres tasques exigents.</li>
+                    <li>Configuracions amb il·luminació RGB personalitzable.</li>
+                </ul>
+            </li>
+        </ul>
+        `;
+            productImage.src = 'img/components/component19.jpg';
+        }
         modal.style.display = 'flex';
     }
 }
