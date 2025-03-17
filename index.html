@@ -1,135 +1,166 @@
 <!DOCTYPE html>
 <html lang="ca">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ServiTech</title>
-    <link rel="stylesheet" href="style/styleGeneral.css">
-    <link rel="stylesheet" href="style/styleIndex.css">
-    <link rel="shortcut icon" href="img/ServiTech.jpg" type="image/x-icon" />
-    <script src="script.js" type="text/javascript" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <h1><a href="index.html">ServiTech</a></h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inici</a></li>
-                <li class="dropdown">
-                    <a href="productes.html">Productes</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="portatils.html">Portàtils</a></li>
-                        <li><a href="pcs.html">PCs</a></li>
-                        <li><a href="components.html">Components</a></li>
-                        <li><a href="periferics.html">Perifèrics</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Ofertes</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="descomptes.html">Descomptes</a></li>
-                        <li><a href="promocions.html">Promocions Especials</a></li>
-                    </ul>
-                </li>
-                <li><a href="contacte.html">Contacte</a></li>
-            </ul>
-        </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Cerca productes...">
-            <button>Cercar</button>
-        </div>
-        <div class="carrito">
-            <a href="javascript:void(0);" onclick="toggleCartSidebar()">
-                <img src="img/carrito.png" alt="Carrito de compra" width="40">
-                <span id="cart-count" class="cart-count">0</span>
-            </a>
-        </div>
-        <div id="cart-sidebar" class="cart-sidebar">
-            <button class="close-cart-btn" onclick="toggleCartSidebar()">✖</button>
-            <h2>Productes a la Cistella</h2>
-            <ul id="cart-products-list"></ul>
-            <p id="cart-total-price">Total: 0€</p>
-            <button onclick="emptyCart()" class="vuidar">Vuidar Cistella</button>
-            <button onclick="completeOrder()" class="comprar">Realitzar Comanda</button>
-        </div>
-    </header>
-    <section class="carousel">
-        <div class="carousel-container">
-            <div class="offer-slide">
-                <img src="img/descompte30.jpg" alt="Oferta 1">
-                <div class="offer-info">
-                    <h2>Gran oferta en Portàtils</h2>
-                    <button><a href="portatils.html">Veure Ofertes</a></button>
-                </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ServiTech</title>
+        <link rel="stylesheet" href="style/styleGeneral.css">
+        <link rel="stylesheet" href="style/styleIndex.css">
+        <link rel="shortcut icon" href="img/ServiTech.jpg"
+            type="image/x-icon" />
+        <script src="script.js" type="text/javascript" defer></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- Google tag (gtag.js) -->
+        <script async
+            src="https://www.googletagmanager.com/gtag/js?id=G-ZHZ2N2757R"></script>
+        <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZHZ2N2757R');
+</script>
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1><a href="index.html">ServiTech</a></h1>
             </div>
-            <div class="offer-slide">
-                <img src="img/descompte15.jpg" alt="Oferta 2">
-                <div class="offer-info">
-                    <h2>Monitors UltraHD amb un 15% de descompte!</h2>
-                    <button>Compra ara</button>
-                </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inici</a></li>
+                    <li class="dropdown">
+                        <a href="productes.html">Productes</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="portatils.html">Portàtils</a></li>
+                            <li><a href="pcs.html">PCs</a></li>
+                            <li><a href="components.html">Components</a></li>
+                            <li><a href="periferics.html">Perifèrics</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Ofertes</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="descomptes.html">Descomptes</a></li>
+                            <li><a href="promocions.html">Promocions
+                                    Especials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Cerca productes...">
+                <button>Cercar</button>
             </div>
-        </div>
-    </section>
-    <main>
-        <section class="products">
-            <h2>Productes Destacats</h2>
-            <div class="productos-filtros">
-                <div class="filtros-categories">
-                    <h3>Categories</h3>
-                    <ul>
-                        <li><a href="#">Ordinadors</a></li>
-                        <li><a href="#">Portàtils</a></li>
-                        <li><a href="#">Emmagatzament</a></li>
-                        <li><a href="#">Accessoris</a></li>
-                        <li><a href="#">Xarxes</a></li>
-                    </ul>
-                </div>
-                <div class="filtros-precio">
-                    <h3>Preu</h3>
-                    <input type="range" id="price-range" min="0" max="1000" value="1000">
-                    <p id="precio-actual">€1000</p>
-                </div>
+            <div class="carrito">
+                <a href="javascript:void(0);" onclick="toggleCartSidebar()">
+                    <img src="img/carrito.png" alt="Carrito de compra"
+                        width="40">
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
             </div>
-            <div class="product-list">
-                <div class="product">
-                    <img src="img/portatil1000.png" alt="Portàtil Gaming">
-                    <p>Portàtil Gaming</p>
-                    <p class="price">999€</p>
-                    <button class="add-to-cart" data-name="Portàtil Gaming" data-price="999€" data-image="img/portatil1000.png">Afegeix al carro</button>
+            <div id="cart-sidebar" class="cart-sidebar">
+                <button class="close-cart-btn"
+                    onclick="toggleCartSidebar()">✖</button>
+                <h2>Productes a la Cistella</h2>
+                <ul id="cart-products-list"></ul>
+                <p id="cart-total-price">Total: 0€</p>
+                <button onclick="emptyCart()" class="vuidar">Vuidar
+                    Cistella</button>
+                <button onclick="completeOrder()" class="comprar">Realitzar
+                    Comanda</button>
+            </div>
+        </header>
+        <section class="carousel">
+            <div class="carousel-container">
+                <div class="offer-slide">
+                    <img src="img/descompte30.jpg" alt="Oferta 1">
+                    <div class="offer-info">
+                        <h2>Gran oferta en Portàtils</h2>
+                        <button><a href="portatils.html">Veure
+                                Ofertes</a></button>
+                    </div>
                 </div>
-                <div class="product">
-                    <img src="img/pc800.jpg" alt="PC Sobretaula">
-                    <p>PC de sobretaula</p>
-                    <p class="price">799€</p>
-                    <button class="add-to-cart" data-name="PC de sobretaula" data-price="799€" data-image="img/pc800.jpg">Afegeix al carro</button>
-                </div>
-                <div class="product">
-                    <img src="img/monitor27.jpg" alt="Monitor UltraHD">
-                    <p>Monitor UltraHD 27"</p>
-                    <p class="price">399€</p>
-                    <button class="add-to-cart" data-name="Monitor UltraHD 27\" data-price="399€" data-image="img/monitor27.jpg">Afegeix al carro</button>
-                </div>
-                <div class="product">
-                    <img src="img/teclat130.png" alt="Teclat RGB">
-                    <p>Teclat Mecànic RGB</p>
-                    <p class="price">129€</p>
-                    <button class="add-to-cart" data-name="Teclat Mecànic RGB" data-price="129€" data-image="img/teclat130.png">Afegeix al carro</button>
+                <div class="offer-slide">
+                    <img src="img/descompte15.jpg" alt="Oferta 2">
+                    <div class="offer-info">
+                        <h2>Monitors UltraHD amb un 15% de descompte!</h2>
+                        <button>Compra ara</button>
+                    </div>
                 </div>
             </div>
         </section>
-    </main>
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 ServiTech. Tots els drets reservats.</p>
-            <div class="footer-links">
-                <a href="#">Termes i Condicions</a>
-                <a href="#">Política de Privacitat</a>
+        <main>
+            <section class="products">
+                <h2>Productes Destacats</h2>
+                <div class="productos-filtros">
+                    <div class="filtros-categories">
+                        <h3>Categories</h3>
+                        <ul>
+                            <li><a href="#">Ordinadors</a></li>
+                            <li><a href="#">Portàtils</a></li>
+                            <li><a href="#">Emmagatzament</a></li>
+                            <li><a href="#">Accessoris</a></li>
+                            <li><a href="#">Xarxes</a></li>
+                        </ul>
+                    </div>
+                    <div class="filtros-precio">
+                        <h3>Preu</h3>
+                        <input type="range" id="price-range" min="0" max="1000"
+                            value="1000">
+                        <p id="precio-actual">€1000</p>
+                    </div>
+                </div>
+                <div class="product-list">
+                    <div class="product">
+                        <img src="img/portatil1000.png" alt="Portàtil Gaming">
+                        <p>Portàtil Gaming</p>
+                        <p class="price">999€</p>
+                        <button class="add-to-cart" data-name="Portàtil Gaming"
+                            data-price="999€"
+                            data-image="img/portatil1000.png">Afegeix al
+                            carro</button>
+                    </div>
+                    <div class="product">
+                        <img src="img/pc800.jpg" alt="PC Sobretaula">
+                        <p>PC de sobretaula</p>
+                        <p class="price">799€</p>
+                        <button class="add-to-cart" data-name="PC de sobretaula"
+                            data-price="799€" data-image="img/pc800.jpg">Afegeix
+                            al carro</button>
+                    </div>
+                    <div class="product">
+                        <img src="img/monitor27.jpg" alt="Monitor UltraHD">
+                        <p>Monitor UltraHD 27"</p>
+                        <p class="price">399€</p>
+                        <button class="add-to-cart"
+                            data-name="Monitor UltraHD 27\" data-price="399€"
+                            data-image="img/monitor27.jpg">Afegeix al
+                            carro</button>
+                    </div>
+                    <div class="product">
+                        <img src="img/teclat130.png" alt="Teclat RGB">
+                        <p>Teclat Mecànic RGB</p>
+                        <p class="price">129€</p>
+                        <button class="add-to-cart"
+                            data-name="Teclat Mecànic RGB" data-price="129€"
+                            data-image="img/teclat130.png">Afegeix al
+                            carro</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 ServiTech. Tots els drets reservats.</p>
+                <div class="footer-links">
+                    <a href="#">Termes i Condicions</a>
+                    <a href="#">Política de Privacitat</a>
+                </div>
             </div>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 </html>
