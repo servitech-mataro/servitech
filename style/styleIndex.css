@@ -1,0 +1,262 @@
+/* Carrousel d'ofertes */
+.carousel {
+  position: relative;
+  width: 100vw;
+  height: 75vh;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-container {
+  display: flex;
+  width: 250%;
+  gap: 10px;
+  margin-top: 160px;
+}
+
+.carousel-container img {
+  width: 80%;
+  max-height: 675px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Botons de les ofertes */
+
+.offer-info button a {
+  text-decoration: none;
+  color: white;
+}
+
+.offer-info {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  width: 90%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.offer-info h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.offer-info button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.offer-info button:hover {
+  background-color: #0056b3;
+}
+
+.offer-slide {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offer-slide img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Secció filtres */
+
+.productos-filtros {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+/* Filtres per categories */
+
+.filtros-categories {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
+}
+
+.filtros-categories ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  list-style-type: none;
+  padding-top: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+.filtros-categories ul li {
+  padding: 10px;
+  border-left: 4px solid #355A96;
+  transition: background 0.3s ease-in-out;
+  background: #f8f8f8;
+  border-radius: 5px;
+}
+
+.filtros-categories ul li:hover {
+  background: #e6f0ff;
+}
+
+.filtros-categories ul li a {
+  text-decoration: none;
+  color: #355A96;
+  font-weight: bold;
+  display: block;
+}
+
+.filtros-categories ul li a:hover {
+  color: #0f2349;
+}
+
+/* Filtre per preu */
+
+.filtros-precio {
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  height: 160px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filtros-precio input {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Llista productes */
+
+.products h2 {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.product {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 220px;
+}
+
+.product img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product p {
+  font-size: 16px;
+  color: #333;
+}
+
+.product .price {
+  font-size: 20px;
+  color: #355A96;
+  margin: 10px 0;
+}
+
+.product button {
+  padding: 10px;
+  background-color: #355A96;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product button:hover {
+  background-color: #0f2349;
+}
+
+/* Estil del filtre range */
+
+.filtros-precio input[type="range"] {
+  width: 90%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3;
+  cursor: pointer;
+}
+
+/* Personalització del botó lliscant per google chrome i mozilla firefox*/
+
+.filtros-precio input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #1e3c72;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.filtros-precio input[type="range"]::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: #1e3c72;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Text del preu actualitzat */
+
+#precio-actual {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1e3c72;
+  margin-top: 10px;
+}

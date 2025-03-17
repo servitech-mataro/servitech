@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ServiTech</title>
+        <link rel="stylesheet" href="style/styleGeneral.css">
+        <link rel="shortcut icon" href="img/ServiTech.jpg"
+            type="image/x-icon" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Google tag (gtag.js) -->
+        <script async
+            src="https://www.googletagmanager.com/gtag/js?id=G-ZHZ2N2757R"></script>
+        <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZHZ2N2757R');
+</script>
+        <script async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9139664669932128"
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1><a href="index.html">ServiTech</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inici</a></li>
+                    <li class="dropdown">
+                        <a href="productes.html">Productes</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="portatils.html">Portàtils</a></li>
+                            <li><a href="pcs.html">PCs</a></li>
+                            <li><a href="components.html">Components</a></li>
+                            <li><a href="periferics.html">Perifèrics</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Ofertes</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="descomptes.html">Descomptes</a></li>
+                            <li><a href="promocions.html">Promocions
+                                    Especials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Cerca productes...">
+                <button>Cercar</button>
+            </div>
+            <div class="carrito">
+                <a href="javascript:void(0);" onclick="toggleCartSidebar()">
+                    <img src="img/carrito.png" alt="Carrito de compra"
+                        width="40">
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+            </div>
+            <div id="cart-sidebar" class="cart-sidebar">
+                <button class="close-cart-btn"
+                    onclick="toggleCartSidebar()">✖</button>
+                <h2>Productes a la Cistella</h2>
+                <ul id="cart-products-list"></ul>
+                <p id="cart-total-price">Total: 0€</p>
+                <button onclick="emptyCart()" class="vuidar">Vuidar
+                    Cistella</button>
+                <button onclick="completeOrder()" class="comprar">Realitzar
+                    Comanda</button>
+            </div>
+        </header>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyBZwmhG6OXUvneGbHMT9d_zcMPAC2dsCnE",
+              authDomain: "servitech-mataro.firebaseapp.com",
+              projectId: "servitech-mataro",
+              storageBucket: "servitech-mataro.firebasestorage.app",
+              messagingSenderId: "814981294069",
+              appId: "1:814981294069:web:0bcd0cdf6f3bcb6edae2bc",
+              measurementId: "G-T6X236SCQC"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+          </script>
+    </body>
