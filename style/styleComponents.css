@@ -93,6 +93,12 @@ h2.placa-base, h2.targetes-grafiquies, h2.processadors, h2.discos-durs, h2.refri
     text-align: center;
 }
 
+/* Estil per al preu */
+
+h3 {
+    margin-bottom: 5px;
+}
+
 /* Estils per al fons del modal */
 
 .product-detail-modal {
