@@ -2708,10 +2708,10 @@ function openProductModal(productId) {
             productImage.src = "img/components/component20.jpg";
         } else if (productId == "component21") {
             productTitle.innerText = 'Corsair Vengeance RGB Pro DDR4 3200 PC4-25600 32GB 2x16GB CL16';
-    productDescription.innerHTML = `
+            productDescription.innerHTML = `
         La <strong>Corsair Vengeance RGB Pro DDR4 3200MHz</strong> ofereix un rendiment alt i un disseny espectacular amb il·luminació RGB personalitzable. Perfecta per a gamers i creadors de contingut que busquen velocitat i estabilitat en el seu sistema.
     `;
-    productCharacteristics.innerHTML = `
+            productCharacteristics.innerHTML = `
                         <ul>
                             <li><strong>Capacitat:</strong> 32GB (2x16GB)
                                 <ul>
@@ -2760,45 +2760,99 @@ function openProductModal(productId) {
                         </ul>
                     `;
             productImage.src = "img/components/component21.jpg";
+        } else if (productId == "component22") {
+            productTitle.innerText = 'G.Skill Trident Z RGB DDR4 4400MHz 64GB (2x32GB) CL19';
+            productDescription.innerHTML = `
+        La <strong>G.Skill Trident Z RGB DDR4 4400MHz</strong> és una memòria RAM d’alt rendiment amb una espectacular il·luminació RGB, ideal per a entusiastes del gaming i creadors de contingut que busquen velocitat extrema i estabilitat.
+    `;
+            productCharacteristics.innerHTML = `
+        <ul>
+            <li><strong>Capacitat:</strong> 64GB (2x32GB)
+                <ul>
+                    <li>Ideal per a gaming, edició de vídeo, streaming i treballs exigents.</li>
+                    <li>Configuració Dual-Channel per a un rendiment òptim.</li>
+                </ul>
+            </li>
+            <li><strong>Velocitat:</strong> 4400MHz (PC4-35200)
+                <ul>
+                    <li>Alta freqüència per a temps de càrrega més ràpids i millor rendiment.</li>
+                </ul>
+            </li>
+            <li><strong>Latència:</strong> CL19
+                <ul>
+                    <li>Equilibri entre velocitat i eficiència per a una resposta ultra ràpida.</li>
+                </ul>
+            </li>
+            <li><strong>Tipus de memòria:</strong> DDR4
+                <ul>
+                    <li>Compatible amb les últimes plataformes Intel i AMD.</li>
+                </ul>
+            </li>
+            <li><strong>Il·luminació RGB:</strong> Sí, personalitzable
+                <ul>
+                    <li>Compatible amb ASUS Aura Sync, MSI Mystic Light, Gigabyte RGB Fusion i més.</li>
+                    <li>Eficiència i personalització amb una gamma de colors espectaculars.</li>
+                </ul>
+            </li>
+            <li><strong>Voltatge:</strong> 1.4V
+                <ul>
+                    <li>Optimitzat per a un alt rendiment i estabilitat.</li>
+                </ul>
+            </li>
+            <li><strong>Dissipador:</strong> Alumini d’alt rendiment
+                <ul>
+                    <li>Millora la dissipació de calor per garantir estabilitat en sessions prolongades.</li>
+                </ul>
+            </li>
+            <li><strong>Aplicacions recomanades:</strong>
+                <ul>
+                    <li>Gaming d’alt rendiment i esports electrònics.</li>
+                    <li>Edició de vídeo i creació de contingut.</li>
+                    <li>Overclocking i sistemes d’alt nivell.</li>
+                </ul>
+            </li>
+        </ul>
+    `;
+            productImage.src = "img/components/component22.jpg";
         }
     }
-    modal.style.display = 'flex';
-}
-
-// Función para cerrar el modal
-function closeProductModal() {
-    const modal = document.getElementById('product-detail-modal');
-    if (modal) {
-        modal.style.display = 'none';
-    }
-}
-
-// Inicializar el carrito y el rango de precio al cargar la página
-document.addEventListener('DOMContentLoaded', function () {
-    updateCartCount();
-    updateCartSidebar();
-    updatePriceRange();
-
-    // Asegúrate de que el modal no se abre al recargar la página
-    const modal = document.getElementById('product-detail-modal');
-    if (modal) {
-        modal.style.display = 'none';  // Si hay algún modal abierto, cerrarlo
+        modal.style.display = 'flex';
     }
 
-    const cartSidebar = document.getElementById('cart-sidebar');
-    if (cartSidebar && localStorage.getItem('cartOpen') === 'true') {
-        cartSidebar.style.display = 'block';
-    } else if (cartSidebar) {
-        cartSidebar.style.display = 'none';
+    // Función para cerrar el modal
+    function closeProductModal() {
+        const modal = document.getElementById('product-detail-modal');
+        if (modal) {
+            modal.style.display = 'none';
+        }
     }
 
-    const addToCartButtons = document.querySelectorAll('.add-to-cart');
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const productName = button.getAttribute('data-name');
-            const productPrice = button.getAttribute('data-price');
-            const productImage = button.getAttribute('data-image');
-            addToCart(productName, productPrice, productImage);
+    // Inicializar el carrito y el rango de precio al cargar la página
+    document.addEventListener('DOMContentLoaded', function () {
+        updateCartCount();
+        updateCartSidebar();
+        updatePriceRange();
+
+        // Asegúrate de que el modal no se abre al recargar la página
+        const modal = document.getElementById('product-detail-modal');
+        if (modal) {
+            modal.style.display = 'none';  // Si hay algún modal abierto, cerrarlo
+        }
+
+        const cartSidebar = document.getElementById('cart-sidebar');
+        if (cartSidebar && localStorage.getItem('cartOpen') === 'true') {
+            cartSidebar.style.display = 'block';
+        } else if (cartSidebar) {
+            cartSidebar.style.display = 'none';
+        }
+
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const productName = button.getAttribute('data-name');
+                const productPrice = button.getAttribute('data-price');
+                const productImage = button.getAttribute('data-image');
+                addToCart(productName, productPrice, productImage);
+            });
         });
     });
-});
