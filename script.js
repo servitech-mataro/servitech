@@ -2814,6 +2814,67 @@ function openProductModal(productId) {
         </ul>
     `;
             productImage.src = "img/components/component22.jpg";
+        } else if (productId == "component23") {
+            productTitle.innerText = 'Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32GB (2x16GB) CL30';
+    productDescription.innerHTML = `
+        La <strong>Corsair Vengeance RGB DDR5 6000MHz</strong> ofereix una nova generació de velocitat i eficiència en memòries RAM, ideal per a gamers i creadors de contingut que volen el màxim rendiment. Amb compatibilitat per a <strong>AMD EXPO</strong> i <strong>Intel XMP</strong>, és perfecta per a overclocking i sistemes d’alt nivell.
+    `;
+    productCharacteristics.innerHTML = `
+        <ul>
+            <li><strong>Capacitat:</strong> 32GB (2x16GB)
+                <ul>
+                    <li>Configuració Dual-Channel per a un rendiment més eficient.</li>
+                    <li>Ideal per a gaming d’alta gamma, edició de vídeo i tasques professionals.</li>
+                </ul>
+            </li>
+            <li><strong>Velocitat:</strong> 6000MHz (PC5-48000)
+                <ul>
+                    <li>Temps de càrrega reduïts i resposta ultra ràpida.</li>
+                    <li>Millora el rendiment en aplicacions exigents i jocs AAA.</li>
+                </ul>
+            </li>
+            <li><strong>Latència:</strong> CL30
+                <ul>
+                    <li>Baixa latència per a una execució més fluida i precisa.</li>
+                </ul>
+            </li>
+            <li><strong>Tipus de memòria:</strong> DDR5
+                <ul>
+                    <li>Major eficiència energètica i velocitats superiors en comparació amb DDR4.</li>
+                </ul>
+            </li>
+            <li><strong>Il·luminació RGB:</strong> Sí, personalitzable
+                <ul>
+                    <li>Compatible amb Corsair iCUE per a sincronització d'il·luminació avançada.</li>
+                    <li>Personalitza els efectes RGB per adaptar-los a la teva configuració.</li>
+                </ul>
+            </li>
+            <li><strong>Compatibilitat:</strong> AMD EXPO i Intel XMP
+                <ul>
+                    <li>Optimitzada per a les últimes generacions de processadors Intel i AMD.</li>
+                    <li>Fàcil configuració d’overclocking amb perfils predefinits.</li>
+                </ul>
+            </li>
+            <li><strong>Dissipador:</strong> Alumini d’alt rendiment
+                <ul>
+                    <li>Garantia de temperatura òptima per a una estabilitat màxima.</li>
+                </ul>
+            </li>
+            <li><strong>Voltatge:</strong> 1.35V
+                <ul>
+                    <li>Equilibri perfecte entre rendiment i eficiència energètica.</li>
+                </ul>
+            </li>
+            <li><strong>Aplicacions recomanades:</strong>
+                <ul>
+                    <li>Gaming d’alt rendiment.</li>
+                    <li>Creació de contingut i edició de vídeo.</li>
+                    <li>Overclocking i sistemes personalitzats.</li>
+                </ul>
+            </li>
+        </ul>
+    `;
+    productImage.src = "img/components/component23.jpg";
         }
     }
         modal.style.display = 'flex';
