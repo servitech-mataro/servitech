@@ -2658,9 +2658,111 @@ function openProductModal(productId) {
         </ul>
         `;
             productImage.src = 'img/components/component19.jpg';
-        } 
-        modal.style.display = 'flex';
+        } else if (productId == "component20") {
+            productTitle.innerText = "Thermaltake TH240 ARGB Sync Snow Edition 240mm Kit Refrigeració Líquida";
+            productDescription.innerHTML = `
+                        El <strong>Thermaltake TH240 ARGB Sync Snow Edition</strong> és un sistema de refrigeració líquida AIO (All-in-One) amb il·luminació <strong>ARGB personalitzable</strong> i un disseny blanc elegant, ideal per a configuracions de PC modernes i estilitzades. Ofereix una dissipació eficient de la calor per a sistemes de gaming i treball intensiu.
+                    `;
+            productCharacteristics.innerHTML = `
+                        <ul>
+                            <li><strong>Tipus:</strong> Refrigeració Líquida AIO (All-in-One)
+                                <ul>
+                                    <li>Solució de refrigeració compacta i fàcil d’instal·lar sense manteniment.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Radiador:</strong> 240mm
+                                <ul>
+                                    <li>Superfície òptima de dissipació per mantenir temperatures baixes fins i tot sota càrregues elevades.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Ventiladors:</strong> 2x 120mm ARGB
+                                <ul>
+                                    <li>Il·luminació ARGB personalitzable compatible amb ASUS Aura Sync, MSI Mystic Light, Gigabyte RGB Fusion i ASRock Polychrome.</li>
+                                    <li>Funcionament silenciós i control PWM per ajustar la velocitat segons la temperatura.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Il·luminació:</strong> ARGB integrat
+                                <ul>
+                                    <li>Opcions de personalització avançades amb sincronització RGB de les principals marques de plaques base.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Compatibilitat:</strong> Intel & AMD
+                                <ul>
+                                    <li>Compatible amb els sockets més populars, incloent Intel LGA1700, LGA1200, LGA115X i AMD AM5, AM4.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Color:</strong> Blanc (Snow Edition)
+                                <ul>
+                                    <li>Disseny net i modern per a muntatges en blanc o RGB.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Aplicacions recomanades:</strong>
+                                <ul>
+                                    <li>PCs gaming amb il·luminació RGB.</li>
+                                    <li>Estacions de treball de disseny i edició.</li>
+                                    <li>Ordinadors personalitzats amb temàtica blanca.</li>
+                                </ul>
+                            </li>
+                        </ul>
+           `;
+            productImage.src = "img/components/component20.jpg";
+        } else if (productId == "component21") {
+            productTitle.innerText = 'Corsair Vengeance RGB Pro DDR4 3200 PC4-25600 32GB 2x16GB CL16';
+    productDescription.innerHTML = `
+        La <strong>Corsair Vengeance RGB Pro DDR4 3200MHz</strong> ofereix un rendiment alt i un disseny espectacular amb il·luminació RGB personalitzable. Perfecta per a gamers i creadors de contingut que busquen velocitat i estabilitat en el seu sistema.
+    `;
+    productCharacteristics.innerHTML = `
+                        <ul>
+                            <li><strong>Capacitat:</strong> 32GB (2x16GB)
+                                <ul>
+                                    <li>Configuració Dual-Channel per a un rendiment òptim.</li>
+                                    <li>Ideal per a gaming, edició de vídeo i tasques exigents.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Velocitat:</strong> 3200MHz (PC4-25600)
+                                <ul>
+                                    <li>Alta freqüència per a una resposta ràpida en jocs i aplicacions.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Latència:</strong> CL16
+                                <ul>
+                                    <li>Temps de resposta reduït per a una millor experiència d’ús.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Tipus de memòria:</strong> DDR4
+                                <ul>        
+                                    <li>Compatible amb les plataformes Intel i AMD modernes.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Il·luminació RGB:</strong> Sí, personalitzable
+                                <ul>
+                                    <li>Compatible amb Corsair iCUE per a sincronització d’efectes RGB.</li>
+                                    <li>Disposa de LEDs RGB dinàmics en cada mòdul.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Voltatge:</strong> 1.35V
+                                <ul>
+                                    <li>Optimitzat per a estabilitat i eficiència energètica.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Dissipador:</strong> Alumini d’alt rendiment
+                                <ul>
+                                    <li>Millora la dissipació de calor per garantir estabilitat en sessions prolongades.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Aplicacions recomanades:</strong>
+                                <ul>
+                                    <li>Gaming d’alt rendiment.</li>
+                                    <li>Edició de vídeo i treballs creatius.</li>
+                                    <li>Actualització de sistemes per a més velocitat i estabilitat.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    `;
+            productImage.src = "img/components/component21.jpg";
+        }
     }
+    modal.style.display = 'flex';
 }
 
 // Función para cerrar el modal
