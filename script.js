@@ -2565,45 +2565,45 @@ function openProductModal(productId) {
             `;
             productCharacteristics.innerHTML = `
                 <ul>
-                    <li><strong>Tipus:</strong> Refrigeració Líquida AIO (All-in-One)
-                        <ul>
-                            <li>Solució fàcil d'instal·lar, dissenyada per a una refrigeració eficient i sense manteniment.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Radiador:</strong> 360mm
-                        <ul>
-                            <li>Gran superfície de dissipació per mantenir la CPU a una temperatura òptima, fins i tot sota càrrega intensa.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Ventiladors:</strong> 3x 120mm Aer P
-                        <ul>
-                            <li>Ventiladors d'alt rendiment amb control PWM per ajustar la velocitat segons les necessitats del sistema.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Pantalla:</strong> Pantalla LCD personalitzable
-                        <ul>
-                            <li>Mostra informació com la temperatura de la CPU, velocitat dels ventiladors o logotips personalitzats en temps real.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Compatibilitat:</strong> Intel & AMD
-                        <ul>
-                            <li>Compatible amb els sockets més recents de processadors Intel i AMD per a un muntatge senzill i ràpid.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Color:</strong> Negre
-                        <ul>
-                            <li>Disseny modern i estètic que s'adapta perfectament a qualsevol configuració de PC.</li>
-                        </ul>   
-                    </li>
-                    <li><strong>Aplicacions recomanades:</strong>
-                        <ul>
-                            <li>Gaming d'alt rendiment.</li>
-                            <li>Estacions de treball professionals.</li>
-                            <li>Ordinadors personalitzats amb refrigeració òptima i un disseny elegant.</li>
-                        </ul>
-                    </li>
-                </ul>
-            `;
+                <li><strong>Tipus:</strong> Refrigeració Líquida AIO (All-in-One)
+                    <ul>
+                        <li>Solució fàcil d'instal·lar, dissenyada per a una refrigeració eficient i sense manteniment.</li>
+                    </ul>
+                </li>
+                <li><strong>Radiador:</strong> 360mm
+                    <ul>
+                        <li>Gran superfície de dissipació per mantenir la CPU a una temperatura òptima, fins i tot sota càrrega intensa.</li>
+                    </ul>
+                </li>
+                <li><strong>Ventiladors:</strong> 3x 120mm Aer P
+                    <ul>
+                        <li>Ventiladors d'alt rendiment amb control PWM per ajustar la velocitat segons les necessitats del sistema.</li>
+                    </ul>
+                </li>
+                <li><strong>Pantalla:</strong> Pantalla LCD personalitzable
+                    <ul>
+                        <li>Mostra informació com la temperatura de la CPU, velocitat dels ventiladors o logotips personalitzats en temps real.</li>
+                    </ul>
+                </li>
+                <li><strong>Compatibilitat:</strong> Intel & AMD
+                    <ul>
+                        <li>Compatible amb els sockets més recents de processadors Intel i AMD per a un muntatge senzill i ràpid.</li>
+                    </ul>
+                </li>
+                <li><strong>Color:</strong> Negre
+                    <ul>
+                        <li>Disseny modern i estètic que s'adapta perfectament a qualsevol configuració de PC.</li>
+                    </ul>
+                </li>
+                <li><strong>Aplicacions recomanades:</strong>
+                    <ul>
+                        <li>Gaming d'alt rendiment.</li>
+                        <li>Estacions de treball professionals.</li>
+                        <li>Ordinadors personalitzats amb refrigeració òptima i un disseny elegant.</li>
+                    </ul>
+                </li>
+            </ul>
+        `;
             productImage.src = 'img/components/component18.jpg';
         } else if (productId == 'component19') {
             productTitle.innerText = 'Corsair iCUE LINK TITAN 240 RX RGB Kit Refrigeració Líquida';
@@ -2612,100 +2612,52 @@ function openProductModal(productId) {
             `
             productCharacteristics.innerHTML = `
                 <ul>
-                    <li><strong>Tipus:</strong> Refrigeració Líquida AIO (All-in-One)
-                        <ul>
-                            <li>Solució completa per a un refredament eficient sense manteniment.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Radiador:</strong> 240mm
-                        <ul>
-                            <li>Equilibri perfecte entre mida i rendiment per a sistemes de gaming i creació de contingut.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Ventiladors:</strong> 2x 120mm RGB
-                        <ul>
-                            <li>Il·luminació RGB vibrant personalitzable amb el programari iCUE.</li>
-                            <li>Funcionament silenciós amb control PWM per ajustar la velocitat automàticament.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Il·luminació:</strong> RGB integrat
-                        <ul>
-                            <li>Sincronització total amb altres components Corsair mitjançant iCUE.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Compatibilitat:</strong> Intel & AMD
-                        <ul>
-                            <li>Compatible amb els últims sockets de CPU d’Intel i AMD per a una integració fàcil.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Tecnologia iCUE LINK:</strong>
-                        <ul>
-                            <li>Sistema d’interconnexió intel·ligent que simplifica el cablejat i millora la gestió tèrmica.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Color:</strong> Negre
-                        <ul>
-                            <li>Estètica elegant per combinar amb qualsevol configuració.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Aplicacions recomanades:</strong>
-                        <ul>
-                            <li>Gaming d’alt rendiment.</li>
-                            <li>Edició de vídeo i altres tasques exigents.</li>
-                            <li>Configuracions amb il·luminació RGB personalitzable.</li>
-                        </ul>
-                    </li>
+            <li><strong>Tipus:</strong> Refrigeració Líquida AIO (All-in-One)
+                <ul>
+                    <li>Solució completa per a un refredament eficient sense manteniment.</li>
                 </ul>
-                `;
+            </li>
+            <li><strong>Radiador:</strong> 240mm
+                <ul>
+                    <li>Equilibri perfecte entre mida i rendiment per a sistemes de gaming i creació de contingut.</li>
+                </ul>
+            </li>
+            <li><strong>Ventiladors:</strong> 2x 120mm RGB
+                <ul>
+                    <li>Il·luminació RGB vibrant personalitzable amb el programari iCUE.</li>
+                    <li>Funcionament silenciós amb control PWM per ajustar la velocitat automàticament.</li>
+                </ul>
+            </li>
+            <li><strong>Il·luminació:</strong> RGB integrat
+                <ul>
+                    <li>Sincronització total amb altres components Corsair mitjançant iCUE.</li>
+                </ul>
+            </li>
+            <li><strong>Compatibilitat:</strong> Intel & AMD
+                <ul>
+                    <li>Compatible amb els últims sockets de CPU d’Intel i AMD per a una integració fàcil.</li>
+                </ul>
+            </li>
+            <li><strong>Tecnologia iCUE LINK:</strong>
+                <ul>
+                    <li>Sistema d’interconnexió intel·ligent que simplifica el cablejat i millora la gestió tèrmica.</li>
+                </ul>
+            </li>
+            <li><strong>Color:</strong> Negre
+                <ul>
+                    <li>Estètica elegant per combinar amb qualsevol configuració.</li>
+                </ul>
+            </li>
+            <li><strong>Aplicacions recomanades:</strong>
+                <ul>
+                    <li>Gaming d’alt rendiment.</li>
+                    <li>Edició de vídeo i altres tasques exigents.</li>
+                    <li>Configuracions amb il·luminació RGB personalitzable.</li>
+                </ul>
+            </li>
+        </ul>
+        `;
             productImage.src = 'img/components/component19.jpg';
-        } else if (productId == 'component20') {
-            productTitle.innerText = 'Thermaltake TH240 ARGB Sync Snow Edition 240mm Kit Refrigeració Líquida';
-            productDescription.innerHTML = `
-                El <strong>Thermaltake TH240 ARGB Sync Snow Edition</strong> és un sistema de refrigeració líquida AIO (All-in-One) amb il·luminació <strong>ARGB personalitzable</strong> i un disseny blanc elegant, ideal per a configuracions de PC modernes i estilitzades. Ofereix una dissipació eficient de la calor per a sistemes de gaming i treball intensiu.
-            `;
-            productCharacteristics.innerHTML = `
-                 <ul>
-                    <li><strong>Tipus:</strong> Refrigeració Líquida AIO (All-in-One)
-                        <ul>
-                            <li>Solució de refrigeració compacta i fàcil d’instal·lar sense manteniment.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Radiador:</strong> 240mm
-                        <ul>
-                            <li>Superfície òptima de dissipació per mantenir temperatures baixes fins i tot sota càrregues elevades.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Ventiladors:</strong> 2x 120mm ARGB
-                        <ul>
-                            <li>Il·luminació ARGB personalitzable compatible amb ASUS Aura Sync, MSI Mystic Light, Gigabyte RGB Fusion i ASRock Polychrome.</li>
-                            <li>Funcionament silenciós i control PWM per ajustar la velocitat segons la temperatura.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Il·luminació:</strong> ARGB integrat
-                        <ul>
-                            <li>Opcions de personalització avançades amb sincronització RGB de les principals marques de plaques base.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Compatibilitat:</strong> Intel & AMD
-                        <ul>
-                            <li>Compatible amb els sockets més populars, incloent Intel LGA1700, LGA1200, LGA115X i AMD AM5, AM4.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Color:</strong> Blanc (Snow Edition)
-                        <ul>
-                            <li>Disseny net i modern per a muntatges en blanc o RGB.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Aplicacions recomanades:</strong>
-                        <ul>
-                            <li>PCs gaming amb il·luminació RGB.</li>
-                            <li>Estacions de treball de disseny i edició.</li>
-                            <li>Ordinadors personalitzats amb temàtica blanca.</li>
-                        </ul>
-                    </li>
-                </ul>
-            `;
-            productImage.src = 'img/components/component20.jpg';
         } 
         modal.style.display = 'flex';
     }
