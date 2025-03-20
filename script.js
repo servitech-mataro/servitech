@@ -3164,64 +3164,64 @@ function openProductModal(productId) {
     } else if (productId == 'component29') {
         productTitle.innerText = 'NZXT H9 Flow Semitorre ATX Cristal Templado USB-C/3.2 Negra';
         productDescription.innerHTML = `
-            La <strong>NZXT H9 Flow</strong> és una semitorre ATX amb un disseny elegant i modern, ideal per a sistemes de gaming i treball de gran rendiment. Amb una gran capacitat de refrigeració gràcies al seu flux d'aire òptim i un panell frontal de cristall temperat, aquesta caixa combina estètica i funcionalitat. A més, disposa de ports USB-C i USB 3.2 per a una connectivitat ràpida i còmoda.
-        `;
+        La <strong>NZXT H9 Flow</strong> és una semitorre ATX amb un disseny elegant i modern, ideal per a sistemes de gaming i treball de gran rendiment. Amb una gran capacitat de refrigeració gràcies al seu flux d'aire òptim i un panell frontal de cristall temperat, aquesta caixa combina estètica i funcionalitat. A més, disposa de ports USB-C i USB 3.2 per a una connectivitat ràpida i còmoda.
+    `;
         productCharacteristics.innerHTML = `
+    <ul>
+        <li><strong>Factor de forma:</strong> Semitorre ATX
             <ul>
-                <li><strong>Factor de forma:</strong> Semitorre ATX
-                    <ul>
-                        <li>Compatible amb plaques base ATX, Micro-ATX i Mini-ITX per a diverses configuracions.</li>
-                    </ul>
-                </li>
-                <li><strong>Disseny:</strong> Cristall temperat
-                    <ul>
-                        <li>Panell frontal i lateral de cristall temperat per mostrar l'interior del sistema de manera elegant i moderna.</li>
-                    </ul>
-                </li>
-                <li><strong>Refredament:</strong> Flux d'aire òptim
-                    <ul>
-                        <li>Disposa de diverses opcions de ventilació per a una refrigeració eficient, incloent espais per a múltiples ventiladors i radiadors.</li>
-                    </ul>
-                </li>
-                <li><strong>Connectivitat:</strong> USB-C/3.2
-                    <ul>
-                        <li>Ports USB-C i USB 3.2 per a una connexió ràpida de dispositius externs.</li>
-                    </ul>
-                </li>
-                <li><strong>Capacitat:</strong> Espai per a components d'alt rendiment
-                    <ul>
-                        <li>Permet la instal·lació de targetes gràfiques llargues, sistemes de refrigeració líquida i altres components de gran mida.</li>
-                    </ul>
-                </li>
-                <li><strong>Color:</strong> Negra
-                    <ul>
-                        <li>Disseny elegant en color negre per a una estètica neta i professional.</li>
-                    </ul>
-                </li>
-                <li><strong>Dimensions:</strong> 475mm x 220mm x 460mm
-                    <ul>
-                        <li>Dimensions òptimes per a allotjar components de gran mida sense comprometre el flux d'aire o la gestió de cables.</li>
-                    </ul>
-                </li>
-                <li><strong>Expansió:</strong> Obertura per a màxima personalització
-                    <ul>
-                        <li>Disposa de múltiples ranures per a ventiladors, discs durs/SSDs i altres dispositius d'emmagatzematge.</li>
-                    </ul>
-                </li>
-                <li><strong>Aplicacions recomanades:</strong>
-                    <ul>
-                        <li>PCs de gaming amb refrigeració eficient i bon flux d'aire.</li>
-                        <li>Estacions de treball que requereixen una bona organització i refrigeració de components d'alt rendiment.</li>
-                        <li>Sistemes amb targetes gràfiques de gran mida i refrigeració líquida.</li>
-                    </ul>
-                </li>
+                <li>Compatible amb plaques base ATX, Micro-ATX i Mini-ITX per a diverses configuracions.</li>
             </ul>
-        `;
+        </li>
+        <li><strong>Disseny:</strong> Cristall temperat
+            <ul>
+                <li>Panell frontal i lateral de cristall temperat per mostrar l'interior del sistema de manera elegant i moderna.</li>
+            </ul>
+        </li>
+        <li><strong>Refredament:</strong> Flux d'aire òptim
+            <ul>
+                <li>Disposa de diverses opcions de ventilació per a una refrigeració eficient, incloent espais per a múltiples ventiladors i radiadors.</li>
+            </ul>
+        </li>
+        <li><strong>Connectivitat:</strong> USB-C/3.2
+            <ul>
+                <li>Ports USB-C i USB 3.2 per a una connexió ràpida de dispositius externs.</li>
+            </ul>
+        </li>
+        <li><strong>Capacitat:</strong> Espai per a components d'alt rendiment
+            <ul>
+                <li>Permet la instal·lació de targetes gràfiques llargues, sistemes de refrigeració líquida i altres components de gran mida.</li>
+            </ul>
+        </li>
+        <li><strong>Color:</strong> Negra
+            <ul>
+                <li>Disseny elegant en color negre per a una estètica neta i professional.</li>
+            </ul>
+        </li>
+        <li><strong>Dimensions:</strong> 475mm x 220mm x 460mm
+            <ul>
+                <li>Dimensions òptimes per a allotjar components de gran mida sense comprometre el flux d'aire o la gestió de cables.</li>
+            </ul>
+        </li>
+        <li><strong>Expansió:</strong> Obertura per a màxima personalització
+            <ul>
+                <li>Disposa de múltiples ranures per a ventiladors, discs durs/SSDs i altres dispositius d'emmagatzematge.</li>
+            </ul>
+        </li>
+        <li><strong>Aplicacions recomanades:</strong>
+            <ul>
+                <li>PCs de gaming amb refrigeració eficient i bon flux d'aire.</li>
+                <li>Estacions de treball que requereixen una bona organització i refrigeració de components d'alt rendiment.</li>
+                <li>Sistemes amb targetes gràfiques de gran mida i refrigeració líquida.</li>
+            </ul>
+        </li>
+    </ul>
+`;
         productImage.src = "img/components/component29.jpg";
     }
-    
     modal.style.display = 'flex';
 }
+
 
 // Función para cerrar el modal
 function closeProductModal() {
