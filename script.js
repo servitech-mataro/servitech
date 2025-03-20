@@ -3051,7 +3051,59 @@ function openProductModal(productId) {
                 </ul>
             `;
             productImage.src = "img/components/component26.jpg";
-        } 
+        } else if (productId == 'component27') {
+            productTitle.innerText = 'Be quiet Power Zone 2 850W 80 PLUS Platinum Modular';
+            productDescription.innerHTML = `
+                La <strong>Be quiet Power Zone 2 850W</strong> és una font d'alimentació d'alt rendiment amb certificació <strong>80 PLUS Platinum</strong>, garantint una eficiència energètica excepcional i un funcionament silenciós. Ideal per a configuracions de gaming i estacions de treball d'alta gamma.
+            `;
+            productCharacteristics.innerHTML = `
+                <ul>
+                    <li><strong>Potència:</strong> 850W
+                        <ul>
+                            <li>Capacitat suficient per alimentar sistemes d’alt rendiment amb targetes gràfiques modernes.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Certificació:</strong> 80 PLUS Platinum
+                        <ul>
+                            <li>Eficiència energètica de fins al 94%, reduint el consum i la calor dissipada.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Factor de Forma:</strong> ATX
+                        <ul>
+                            <li>Compatible amb les últimes generacions de plaques base i components.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Connexions:</strong> PCIe, SATA, CPU, 24-pin
+                        <ul>
+                            <li>Inclou connexions per a targetes gràfiques, discs SSD/HDD i altres components essencials.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Modularitat:</strong> Completament modular
+                        <ul>
+                            <li>Facilita una millor organització dels cables i un flux d’aire més eficient dins la caixa.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ventilador:</strong> 135mm silenciós
+                        <ul>
+                            <li>Tecnologia Silent Wings per a un funcionament ultra silenciós i un refredament òptim.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Proteccions:</strong> OVP, UVP, SCP, OPP, OTP
+                        <ul>
+                            <li>Inclou proteccions avançades contra sobretensions, curtcircuits i altres possibles problemes elèctrics.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Aplicacions recomanades:</strong>
+                        <ul>
+                            <li>PCs de gaming d’alt rendiment.</li>
+                            <li>Estacions de treball professionals.</li>
+                            <li>Configuracions amb targetes gràfiques de nova generació.</li>
+                        </ul>
+                    </li>
+                </ul>
+            `;
+            productImage.src = "img/components/component27.jpg";
+        }
     }
     modal.style.display = 'flex';
 }
