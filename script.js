@@ -3217,7 +3217,7 @@ function openProductModal(productId) {
                 </li>
             </ul>
         `;
-        productImage.src = "img/components/component29.jpg"
+        productImage.src = "img/components/component29.jpg";
     } 
     modal.style.display = 'flex';
 }
