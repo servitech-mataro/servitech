@@ -3162,7 +3162,7 @@ function openProductModal(productId) {
             productImage.src = "img/components/component28.jpg";
         }
     } else if (productId == 'component29') {
-        productTitle.innerText = 'NZXT H9 Flow Semitorre ATX Vidre USB-C/3.2 Negra';
+        productTitle.innerText = 'NZXT H9 Flow Semitorre ATX Cristal Templado USB-C/3.2 Negra';
         productDescription.innerHTML = `
             La <strong>NZXT H9 Flow</strong> és una semitorre ATX amb un disseny elegant i modern, ideal per a sistemes de gaming i treball de gran rendiment. Amb una gran capacitat de refrigeració gràcies al seu flux d'aire òptim i un panell frontal de cristall temperat, aquesta caixa combina estètica i funcionalitat. A més, disposa de ports USB-C i USB 3.2 per a una connectivitat ràpida i còmoda.
         `;
@@ -3218,7 +3218,8 @@ function openProductModal(productId) {
             </ul>
         `;
         productImage.src = "img/components/component29.jpg";
-    } 
+    }
+    
     modal.style.display = 'flex';
 }
 
