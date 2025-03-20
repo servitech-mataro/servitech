@@ -2816,10 +2816,10 @@ function openProductModal(productId) {
             productImage.src = "img/components/component22.jpg";
         } else if (productId == "component23") {
             productTitle.innerText = 'Corsair Vengeance RGB DDR5 6000MHz PC5-48000 32GB (2x16GB) CL30';
-    productDescription.innerHTML = `
+            productDescription.innerHTML = `
         La <strong>Corsair Vengeance RGB DDR5 6000MHz</strong> ofereix una nova generació de velocitat i eficiència en memòries RAM, ideal per a gamers i creadors de contingut que volen el màxim rendiment. Amb compatibilitat per a <strong>AMD EXPO</strong> i <strong>Intel XMP</strong>, és perfecta per a overclocking i sistemes d’alt nivell.
     `;
-    productCharacteristics.innerHTML = `
+            productCharacteristics.innerHTML = `
         <ul>
             <li><strong>Capacitat:</strong> 32GB (2x16GB)
                 <ul>
@@ -2874,46 +2874,222 @@ function openProductModal(productId) {
             </li>
         </ul>
     `;
-    productImage.src = "img/components/component23.jpg";
-        }
+            productImage.src = "img/components/component23.jpg";
+        } else if (productId == "component24") {
+            productTitle.innerText = 'Corsair Dominator Titanium DDR5 6600MHz 64GB (2x32GB) CL32 XMP Blanc';
+            productDescription.innerHTML = `
+        La <strong>Corsair Dominator Titanium DDR5 6600MHz</strong> és una memòria RAM d’alt rendiment dissenyada per oferir velocitats extremes i una estabilitat superior. Amb un disseny premium en color blanc i il·luminació RGB personalitzable, és perfecta per a entusiastes del gaming i professionals que requereixen el màxim rendiment.
+    `;
+            productCharacteristics.innerHTML = `
+        <ul>
+            <li><strong>Capacitat:</strong> 64GB (2x32GB)
+                <ul>
+                    <li>Gran capacitat per a treballs exigents i multitasking avançat.</li>
+                </ul>
+            </li>
+            <li><strong>Velocitat:</strong> 6600MHz (PC5-52800)
+                <ul>
+                    <li>Altíssimes velocitats per a un rendiment fluid en aplicacions i jocs.</li>
+                </ul>
+            </li>
+            <li><strong>Latència:</strong> CL32
+                <ul>
+                    <li>Temps de resposta optimitzat per a una experiència més ràpida i estable.</li>
+                </ul>
+            </li>
+            <li><strong>Tipus de memòria:</strong> DDR5
+                <ul>
+                    <li>Eficiència energètica millorada i major ample de banda respecte a DDR4.</li>
+                </ul>
+            </li>
+            <li><strong>Il·luminació RGB:</strong> Sí, totalment personalitzable
+                <ul>
+                    <li>Compatible amb Corsair iCUE per a una sincronització perfecta amb altres components.</li>
+                </ul>
+            </li>
+            <li><strong>Compatibilitat:</strong> Intel XMP 3.0
+                <ul>
+                    <li>Overclocking fàcil i estable amb perfils preconfigurats.</li>
+                </ul>
+            </li>
+            <li><strong>Dissipador:</strong> Alumini d’alt rendiment
+                <ul>
+                    <li>Dispersió tèrmica eficient per mantenir temperatures baixes.</li>
+                </ul>
+            </li>
+            <li><strong>Color:</strong> Blanc
+                <ul>
+                    <li>Elegant i perfecte per a setups de color clar.</li>
+                </ul>
+            </li>
+            <li><strong>Voltatge:</strong> 1.4V
+                <ul>
+                    <li>Equilibri perfecte entre rendiment i eficiència.</li>
+                </ul>
+            </li>
+            <li><strong>Aplicacions recomanades:</strong>
+                <ul>
+                    <li>Gaming d’alt rendiment.</li>
+                    <li>Edició de vídeo i treballs professionals.</li>
+                    <li>Configuracions avançades i overclocking.</li>
+                </ul>
+            </li>
+        </ul>
+    `;
+            productImage.src = "img/components/component24.jpg";
+        } else if (productId == 'component25') {
+            productTitle.innerText = 'Corsair RMx Series RM850x PCIe 5.1 ATX 3.1 850W 80 Plus Gold Modular';
+            productDescription.innerHTML = `
+                La <strong>Corsair RM850x</strong> de la sèrie RMx és una font d’alimentació d’alta eficiència i rendiment, dissenyada per a equips de gaming i estacions de treball exigents. Amb certificació <strong>80 Plus Gold</strong> i un disseny modular, ofereix una alimentació estable i eficient, reduint el consum energètic i el soroll del sistema.
+            `;
+            productCharacteristics.innerHTML = `
+                <ul>
+                    <li><strong>Potència:</strong> 850W
+                        <ul>
+                            <li>Capacitat suficient per alimentar sistemes d’alt rendiment amb targetes gràfiques modernes.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Certificació:</strong> 80 Plus Gold
+                        <ul>
+                            <li>Alta eficiència energètica que redueix el consum i la calor generada.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Factor de Forma:</strong> ATX 3.1
+                        <ul>
+                            <li>Compatible amb les últimes generacions de plaques base i components.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Connexions:</strong> PCIe 5.1 (16-pin per GPU modernes)
+                        <ul>
+                            <li>Preparada per alimentar targetes gràfiques d'última generació amb el nou connector PCIe 5.1 de 12+4 pins.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Modularitat:</strong> Completament modular
+                        <ul>
+                            <li>Permet utilitzar només els cables necessaris per a una gestió òptima del cablejat i un flux d'aire millor.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ventilador:</strong> 140mm amb tecnologia Zero RPM
+                        <ul>
+                            <li>Funcionament ultra silenciós gràcies a la parada del ventilador quan la càrrega és baixa.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Condensadors:</strong> 100% japonesos a 105°C
+                        <ul>
+                            <li>Components d'alta qualitat per una fiabilitat i estabilitat excepcionals.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Proteccions:</strong> OVP, UVP, SCP, OPP, OTP
+                        <ul>
+                            <li>Inclou proteccions avançades contra sobretensions, curtcircuits i altres possibles problemes elèctrics.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Aplicacions recomanades:</strong>
+                        <ul>
+                            <li>PCs de gaming d’alt rendiment.</li>
+                            <li>Estacions de treball professionals.</li>
+                            <li>Configuracions amb targetes gràfiques de nova generació.</li>
+                        </ul>
+                    </li>
+                </ul>
+            `;
+            productImage.src = "img/components/component25.jpg";
+        } else if (productId == 'component26') {
+            productTitle.innerText = 'Tempest PSU X 850W 80+ Bronze Modular Font d’Alimentació Blanca';
+            productDescription.innerHTML = `
+                La <strong>Tempest PSU X 850W</strong> és una font d'alimentació fiable i eficient, ideal per a sistemes de gaming i treball. Amb certificació <strong>80 Plus Bronze</strong>, garanteix un bon equilibri entre rendiment i eficiència energètica, a més d'oferir un disseny modular per a una gestió del cablejat més neta.
+            `;
+            productCharacteristics.innerHTML = `
+                <ul>
+                    <li><strong>Potència:</strong> 850W
+                        <ul>
+                            <li>Capacitat suficient per alimentar components d’alt rendiment.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Certificació:</strong> 80 Plus Bronze
+                        <ul>
+                            <li>Eficiència energètica millorada que redueix el consum i la calor dissipada.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Factor de forma:</strong> ATX
+                        <ul>
+                            <li>Compatible amb la majoria de caixes i plaques base estàndard.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Connexions:</strong> PCIe, SATA, CPU, 24-pin
+                        <ul>
+                            <li>Inclou connexions per a targetes gràfiques, discs SSD/HDD i altres components essencials.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Modularitat:</strong> Completament modular
+                        <ul>
+                            <li>Facilita una millor organització dels cables i un flux d’aire més eficient dins la caixa.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ventilador:</strong> 120mm silenciós
+                        <ul>
+                            <li>Operació silenciosa amb ajust automàtic de velocitat per a un refredament òptim.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Color:</strong> Blanc
+                        <ul>
+                            <li>Disseny elegant en blanc per a configuracions amb estètica clara i moderna.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Proteccions:</strong> OVP, UVP, SCP, OPP, OTP
+                        <ul>
+                            <li>Seguretat millorada contra fluctuacions de voltatge i altres problemes elèctrics.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Aplicacions recomanades:</strong>
+                        <ul>
+                            <li>PCs de gaming i multimèdia.</li>
+                            <li>Equips d’oficina i treball.</li>
+                            <li>Sistemes amb components de gamma mitjana-alta.</li>
+                        </ul>
+                    </li>
+                </ul>
+            `;
+            productImage.src = "img/components/component26.jpg";
+        } 
     }
-        modal.style.display = 'flex';
+    modal.style.display = 'flex';
+}
+
+// Función para cerrar el modal
+function closeProductModal() {
+    const modal = document.getElementById('product-detail-modal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Inicializar el carrito y el rango de precio al cargar la página
+document.addEventListener('DOMContentLoaded', function () {
+    updateCartCount();
+    updateCartSidebar();
+    updatePriceRange();
+
+    // Asegúrate de que el modal no se abre al recargar la página
+    const modal = document.getElementById('product-detail-modal');
+    if (modal) {
+        modal.style.display = 'none';  // Si hay algún modal abierto, cerrarlo
     }
 
-    // Función para cerrar el modal
-    function closeProductModal() {
-        const modal = document.getElementById('product-detail-modal');
-        if (modal) {
-            modal.style.display = 'none';
-        }
+    const cartSidebar = document.getElementById('cart-sidebar');
+    if (cartSidebar && localStorage.getItem('cartOpen') === 'true') {
+        cartSidebar.style.display = 'block';
+    } else if (cartSidebar) {
+        cartSidebar.style.display = 'none';
     }
 
-    // Inicializar el carrito y el rango de precio al cargar la página
-    document.addEventListener('DOMContentLoaded', function () {
-        updateCartCount();
-        updateCartSidebar();
-        updatePriceRange();
-
-        // Asegúrate de que el modal no se abre al recargar la página
-        const modal = document.getElementById('product-detail-modal');
-        if (modal) {
-            modal.style.display = 'none';  // Si hay algún modal abierto, cerrarlo
-        }
-
-        const cartSidebar = document.getElementById('cart-sidebar');
-        if (cartSidebar && localStorage.getItem('cartOpen') === 'true') {
-            cartSidebar.style.display = 'block';
-        } else if (cartSidebar) {
-            cartSidebar.style.display = 'none';
-        }
-
-        const addToCartButtons = document.querySelectorAll('.add-to-cart');
-        addToCartButtons.forEach(button => {
-            button.addEventListener('click', function () {
-                const productName = button.getAttribute('data-name');
-                const productPrice = button.getAttribute('data-price');
-                const productImage = button.getAttribute('data-image');
-                addToCart(productName, productPrice, productImage);
-            });
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const productName = button.getAttribute('data-name');
+            const productPrice = button.getAttribute('data-price');
+            const productImage = button.getAttribute('data-image');
+            addToCart(productName, productPrice, productImage);
         });
     });
+});

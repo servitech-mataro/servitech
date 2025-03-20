@@ -85,7 +85,7 @@ h1.components {
 }
 
 /* Títols de seccions */
-h2.placa-base, h2.targetes-grafiquies, h2.processadors, h2.discos-durs, h2.refrigeracio, h2.ram {
+h2.placa-base, h2.targetes-grafiquies, h2.processadors, h2.discos-durs, h2.refrigeracio, h2.ram, h2.font {
     width: 100%;
     font-size: 30px;
     color: #222;
