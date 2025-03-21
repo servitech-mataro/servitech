@@ -3345,7 +3345,7 @@ function openProductModal(productId) {
             `;
             productImage.src = "img/components/component31.jpg";
         } else if (productId == 'component32') {
-            productTitle.innerText = 'MSI MAG Pano M100R PZ ARGB Semi Torre Doble Cristal Templado USB-C Blanca';
+            productTitle.innerText = 'MSI MAG Pano M100R PZ ARGB Semi Torre Doble Vidre USB-C Blanca';
             productDescription.innerHTML = `
                 La <strong>MSI MAG Pano M100R PZ</strong> és una semitorre amb un disseny elegant i modern, ideal per a usuaris que busquen un sistema potent i estètic. Amb un panell de doble cristall temperat i il·luminació ARGB personalitzable, aquesta torre ofereix un flux d'aire òptim per a components d'alt rendiment. A més, disposa de connexió USB-C per a una major velocitat de transferència de dades i una major compatibilitat amb dispositius moderns.
             `;
