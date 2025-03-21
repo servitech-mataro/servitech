@@ -126,9 +126,12 @@ function updatePriceRange() {
 
 // Función para abrir el modal con detalles del producto
 function openProductModal(productId) {
+    console.log("Intentant obrir modal per a:", productId); // Depuració
+
+    // Agafem els elements del modal
     const modal = document.getElementById('product-detail-modal');
     const productTitle = document.getElementById('product-title');
-    const productDescription = document.getElementById('product-description'); // Correcte
+    const productDescription = document.getElementById('product-description');
     const productImage = document.getElementById('product-image-large');
     const productCharacteristics = document.getElementById('product-characteristics');
 
@@ -3160,67 +3163,255 @@ function openProductModal(productId) {
                 </ul>
             `;
             productImage.src = "img/components/component28.jpg";
-        }
-    } else if (productId == 'component29') {
-        productTitle.innerText = 'NZXT H9 Flow Semitorre ATX Cristal Templado USB-C/3.2 Negra';
-        productDescription.innerHTML = `
-        La <strong>NZXT H9 Flow</strong> és una semitorre ATX amb un disseny elegant i modern, ideal per a sistemes de gaming i treball de gran rendiment. Amb una gran capacitat de refrigeració gràcies al seu flux d'aire òptim i un panell frontal de cristall temperat, aquesta caixa combina estètica i funcionalitat. A més, disposa de ports USB-C i USB 3.2 per a una connectivitat ràpida i còmoda.
-    `;
-        productCharacteristics.innerHTML = `
-    <ul>
-        <li><strong>Factor de forma:</strong> Semitorre ATX
+        } else if (productId == 'component29') {
+            productTitle.innerText = 'NZXT H9 Flow Semitorre ATX Vidre USB-C/3.2 Negra';
+            productDescription.innerHTML = `
+            La <strong>NZXT H9 Flow</strong> és una semitorre ATX amb un disseny elegant i modern, ideal per a sistemes de gaming i treball de gran rendiment. Amb una gran capacitat de refrigeració gràcies al seu flux d'aire òptim i un panell frontal de cristall temperat, aquesta caixa combina estètica i funcionalitat. A més, disposa de ports USB-C i USB 3.2 per a una connectivitat ràpida i còmoda.
+        `;
+            productCharacteristics.innerHTML = `
             <ul>
-                <li>Compatible amb plaques base ATX, Micro-ATX i Mini-ITX per a diverses configuracions.</li>
+            <li><strong>Factor de forma:</strong> Semitorre ATX
+                <ul>
+                    <li>Compatible amb plaques base ATX, Micro-ATX i Mini-ITX per a diverses configuracions.</li>
+                </ul>
+            </li>
+            <li><strong>Disseny:</strong> Cristall temperat
+                <ul>
+                    <li>Panell frontal i lateral de cristall temperat per mostrar l'interior del sistema de manera elegant i moderna.</li>
+                </ul>
+            </li>
+            <li><strong>Refredament:</strong> Flux d'aire òptim
+                <ul>
+                    <li>Disposa de diverses opcions de ventilació per a una refrigeració eficient, incloent espais per a múltiples ventiladors i radiadors.</li>
+                </ul>
+            </li>
+            <li><strong>Connectivitat:</strong> USB-C/3.2
+                <ul>
+                    <li>Ports USB-C i USB 3.2 per a una connexió ràpida de dispositius externs.</li>
+                </ul>
+            </li>
+            <li><strong>Capacitat:</strong> Espai per a components d'alt rendiment
+                <ul>
+                    <li>Permet la instal·lació de targetes gràfiques llargues, sistemes de refrigeració líquida i altres components de gran mida.</li>
+                </ul>
+            </li>
+            <li><strong>Color:</strong> Negra
+                <ul>
+                    <li>Disseny elegant en color negre per a una estètica neta i professional.</li>
+                </ul>
+            </li>
+            <li><strong>Dimensions:</strong> 475mm x 220mm x 460mm
+                <ul>
+                    <li>Dimensions òptimes per a allotjar components de gran mida sense comprometre el flux d'aire o la gestió de cables.</li>
+                </ul>
+            </li>
+            <li><strong>Expansió:</strong> Obertura per a màxima personalització
+                <ul>
+                    <li>Disposa de múltiples ranures per a ventiladors, discs durs/SSDs i altres dispositius d'emmagatzematge.</li>
+                </ul>
+            </li>
+            <li><strong>Aplicacions recomanades:</strong>
+                <ul>
+                    <li>PCs de gaming amb refrigeració eficient i bon flux d'aire.</li>
+                    <li>Estacions de treball que requereixen una bona organització i refrigeració de components d'alt rendiment.</li>
+                    <li>Sistemes amb targetes gràfiques de gran mida i refrigeració líquida.</li>
+                </ul>
+            </li>
+        </ul>
+        `;
+            productImage.src = "img/components/component29.jpg";
+        } else if (productId == "component30") {
+            productTitle.innerText = 'Lian-Li O11D EVO RGB Cristal Templado USB 3.0 Negra';
+            productDescription.innerHTML = `
+        La <strong>Lian-Li O11D EVO</strong> és una torre ATX de disseny elegant i modern amb un panell de cristall temperat, ideal per a sistemes de gaming i alta prestació. Aquest model destaca per la seva capacitat d’expansió, flux d'aire òptim i sistema de refrigeració flexible, així com la possibilitat de personalitzar l'RGB per a adaptar-lo als gustos personals. Amb una connexió USB 3.0, és perfecta per a usuaris que busquen un sistema potent i estètic.
+    `;
+            productCharacteristics.innerHTML = `
+        <ul>
+        <li><strong>Factor de forma:</strong> Torre ATX
+            <ul>
+                <li>Compatible amb plaques base ATX, Micro-ATX i Mini-ITX per a una gran flexibilitat en les configuracions.</li>
             </ul>
         </li>
         <li><strong>Disseny:</strong> Cristall temperat
             <ul>
-                <li>Panell frontal i lateral de cristall temperat per mostrar l'interior del sistema de manera elegant i moderna.</li>
+                <li>Panell frontal i lateral de cristall temperat per a una estètica neta i elegant, oferint visibilitat a l'interior del sistema.</li>
             </ul>
         </li>
         <li><strong>Refredament:</strong> Flux d'aire òptim
             <ul>
-                <li>Disposa de diverses opcions de ventilació per a una refrigeració eficient, incloent espais per a múltiples ventiladors i radiadors.</li>
+                <li>Permet instal·lar múltiples ventiladors i radiadors per a una refrigeració eficaç, amb un disseny de panells que facilita el flux d'aire.</li>
             </ul>
         </li>
-        <li><strong>Connectivitat:</strong> USB-C/3.2
+        <li><strong>Il·luminació:</strong> RGB personalitzable
             <ul>
-                <li>Ports USB-C i USB 3.2 per a una connexió ràpida de dispositius externs.</li>
+                <li>Inclou il·luminació RGB personalitzable per a adaptar l'estètica del sistema al gust de l'usuari.</li>
             </ul>
         </li>
-        <li><strong>Capacitat:</strong> Espai per a components d'alt rendiment
+        <li><strong>Connectivitat:</strong> USB 3.0
             <ul>
-                <li>Permet la instal·lació de targetes gràfiques llargues, sistemes de refrigeració líquida i altres components de gran mida.</li>
+                <li>Ports USB 3.0 per a una connexió ràpida de dispositius externs, millorant la compatibilitat i l'eficiència.</li>
+            </ul>
+        </li>
+        <li><strong>Capacitat:</strong> Ample espai per a components de gran rendiment
+            <ul>
+                <li>Permet allotjar targetes gràfiques llargues, sistemes de refrigeració líquida i altres components d'alt rendiment.</li>
             </ul>
         </li>
         <li><strong>Color:</strong> Negra
             <ul>
-                <li>Disseny elegant en color negre per a una estètica neta i professional.</li>
+                <li>Acabat elegant en color negre, que aporta una estètica neta i moderna al sistema.</li>
             </ul>
         </li>
-        <li><strong>Dimensions:</strong> 475mm x 220mm x 460mm
+        <li><strong>Dimensions:</strong> 472mm x 272mm x 510mm
             <ul>
-                <li>Dimensions òptimes per a allotjar components de gran mida sense comprometre el flux d'aire o la gestió de cables.</li>
+                <li>Dimensions òptimes per allotjar una gran varietat de components sense comprometre l'espai intern ni el flux d'aire.</li>
             </ul>
         </li>
-        <li><strong>Expansió:</strong> Obertura per a màxima personalització
+        <li><strong>Expansió:</strong> Màxima flexibilitat per a la personalització
             <ul>
-                <li>Disposa de múltiples ranures per a ventiladors, discs durs/SSDs i altres dispositius d'emmagatzematge.</li>
+                <li>Disposa de múltiples ranures per a ventiladors, discs durs/SSDs i altres dispositius d'emmagatzematge per a una personalització òptima.</li>
             </ul>
         </li>
         <li><strong>Aplicacions recomanades:</strong>
             <ul>
-                <li>PCs de gaming amb refrigeració eficient i bon flux d'aire.</li>
-                <li>Estacions de treball que requereixen una bona organització i refrigeració de components d'alt rendiment.</li>
-                <li>Sistemes amb targetes gràfiques de gran mida i refrigeració líquida.</li>
+                <li>PCs de gaming que requereixen un disseny elegant amb una gran capacitat de refrigeració.</li>
+                <li>Sistemes de treball amb components d'alt rendiment i necessitats d'expansió.</li>
+                <li>Usuaris que volen una torre amb una estètica moderna i personalitzable amb il·luminació RGB.</li>
             </ul>
         </li>
     </ul>
-`;
-        productImage.src = "img/components/component29.jpg";
+    `;
+            productImage.src = "img/components/component30.jpg";
+        } else if (productId == 'component31') {
+            productTitle.innerText = 'Forgeon Tiberium ARGB Vidre USB 3.0 Blanca';
+            productDescription.innerHTML = `
+                La <strong>Forgeon Tiberium</strong> és una torre ATX amb un disseny modern i elegant, amb un panell de cristall temperat i il·luminació ARGB. Aquesta caixa destaca per la seva capacitat d’expansió, el flux d'aire optimitzat i el seu disseny net i estètic en color blanc. Amb una connexió USB 3.0 i un sistema de refrigeració flexible, és ideal per a usuaris que busquen potència i un acabat visual atractiu.
+            `;
+            productCharacteristics.innerHTML = `
+                <ul>
+                <li><strong>Factor de forma:</strong> Torre ATX
+                    <ul>
+                        <li>Compatible amb plaques base ATX, Micro-ATX i Mini-ITX, oferint una gran varietat de configuracions possibles.</li>
+                    </ul>
+                </li>
+                <li><strong>Disseny:</strong> Cristall temperat
+                    <ul>
+                        <li>Panell frontal i lateral de cristall temperat per a un acabat elegant i per mostrar el interior del sistema de manera clara.</li>
+                    </ul>
+                </li>
+                <li><strong>Refredament:</strong> Flux d'aire òptim
+                    <ul>
+                        <li>Disposa d'espai per a múltiples ventiladors i radiadors, millorant la refrigeració i el rendiment del sistema.</li>
+                    </ul>
+                </li>
+                <li><strong>Il·luminació:</strong> ARGB personalitzable
+                    <ul>
+                        <li>Inclou il·luminació ARGB per a personalitzar l'aspecte del sistema, creant efectes de llum espectaculars.</li>
+                    </ul>
+                </li>
+                <li><strong>Connectivitat:</strong> USB 3.0
+                    <ul>
+                        <li>Ports USB 3.0 per a una connexió ràpida i eficient de dispositius externs.</li>
+                    </ul>
+                </li>
+                <li><strong>Capacitat:</strong> Espai per a components d'alt rendiment
+                    <ul>
+                        <li>Permet instal·lar targetes gràfiques llargues, sistemes de refrigeració líquida i altres components d'alt rendiment.</li>
+                    </ul>
+                </li>
+                <li><strong>Color:</strong> Blanca
+                    <ul>
+                        <li>Disseny elegant en color blanc per a una estètica neta i moderna, que combina amb qualsevol configuració d'espai.</li>
+                    </ul>
+                </li>
+                <li><strong>Dimensions:</strong> 465mm x 210mm x 470mm
+                    <ul>
+                        <li>Dimensions òptimes per allotjar components grans sense comprometre l'espai ni la circulació d'aire.</li>
+                    </ul>
+                </li>
+                <li><strong>Expansió:</strong> Ample espai per a personalització
+                    <ul>
+                        <li>Inclou múltiples ranures per a ventiladors, disc durs/SSDs i altres dispositius d'emmagatzematge, permetent una personalització òptima.</li>
+                    </ul>
+                </li>
+                <li><strong>Aplicacions recomanades:</strong>
+                    <ul>
+                        <li>PCs de gaming amb un disseny elegant i una gran capacitat de refrigeració.</li>
+                        <li>Sistemes d'alt rendiment que requereixen una bona gestió del flux d'aire i refrigeració.</li>
+                        <li>Usuaris que busquen una torre amb un acabat modern i personalitzable amb il·luminació ARGB.</li>
+                    </ul>
+                </li>
+            </ul>
+            `;
+            productImage.src = "img/components/component31.jpg";
+        } else if (productId == 'component32') {
+            productTitle.innerText = 'MSI MAG Pano M100R PZ ARGB Semi Torre Doble Cristal Templado USB-C Blanca';
+            productDescription.innerHTML = `
+                La <strong>MSI MAG Pano M100R PZ</strong> és una semitorre amb un disseny elegant i modern, ideal per a usuaris que busquen un sistema potent i estètic. Amb un panell de doble cristall temperat i il·luminació ARGB personalitzable, aquesta torre ofereix un flux d'aire òptim per a components d'alt rendiment. A més, disposa de connexió USB-C per a una major velocitat de transferència de dades i una major compatibilitat amb dispositius moderns.
+            `;
+            productCharacteristics.innerHTML = `
+                <ul>
+                <li><strong>Factor de forma:</strong> Semitorre
+                    <ul>
+                        <li>Compatible amb plaques base ATX, Micro-ATX i Mini-ITX per a una gran flexibilitat en la configuració del sistema.</li>
+                    </ul>
+                </li>
+                <li><strong>Disseny:</strong> Doble cristall temperat
+                    <ul>
+                        <li>Panells frontals i laterals de cristall temperat per mostrar el teu sistema de manera elegant i estilitzada, amb una visibilitat excepcional.</li>
+                    </ul>
+                </li>
+                <li><strong>Refredament:</strong> Flux d'aire òptim
+                    <ul>
+                        <li>Espai adequat per a múltiples ventiladors i radiadors per garantir una refrigeració eficaç dels components de gran rendiment.</li>
+                    </ul>
+                </li>
+                <li><strong>Il·luminació:</strong> ARGB personalitzable
+                    <ul>
+                        <li>Inclou il·luminació ARGB per personalitzar l'aspecte visual del teu sistema amb diversos efectes de llum per a un toc personalitzat.</li>
+                    </ul>
+                </li>
+                <li><strong>Connectivitat:</strong> USB-C
+                    <ul>
+                        <li>Ports USB-C per a una connexió ràpida de dispositius externs amb una velocitat de transferència de dades superior.</li>
+                    </ul>
+                </li>
+                <li><strong>Capacitat:</strong> Espai per a components d'alt rendiment
+                    <ul>
+                        <li>Disposa d'amplis espais per allotjar targetes gràfiques llargues, refrigeració líquida i altres components d'alt rendiment.</li>
+                    </ul>
+                </li>
+                <li><strong>Color:</strong> Blanca
+                    <ul>
+                        <li>Acabat elegant en color blanc, oferint una estètica neta i moderna, que s'adapta a qualsevol ambient de treball o gaming.</li>
+                    </ul>
+                </li>
+                <li><strong>Dimensions:</strong> 452mm x 210mm x 474mm
+                    <ul>
+                        <li>Dimensions òptimes per allotjar components de gran mida sense comprometre l'espai ni la circulació d'aire.</li>
+                    </ul>
+                </li>
+                <li><strong>Expansió:</strong> Personalització flexible
+                    <ul>
+                        <li>Disposa de múltiples ranures per a ventiladors, discs durs/SSDs i altres dispositius d'emmagatzematge per una personalització òptima.</li>
+                    </ul>
+                </li>
+                <li><strong>Aplicacions recomanades:</strong>
+                    <ul>
+                        <li>PCs de gaming amb un disseny elegant i gran capacitat de refrigeració.</li>
+                        <li>Sistemes d'alt rendiment que requereixen una gestió eficient del flux d'aire i refrigeració.</li>
+                        <li>Usuaris que busquen una torre amb una estètica moderna i personalitzable amb il·luminació ARGB.</li>
+                    </ul>
+                </li>
+            </ul>
+            `;
+            productImage.src = "img/components/component32.jpg";
+        } 
+
+        modal.style.display = 'flex';
     }
-    modal.style.display = 'flex';
 }
+
 
 
 // Función para cerrar el modal
